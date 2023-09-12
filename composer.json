@@ -1,0 +1,29 @@
+{
+    "name": "gitee-php/gitee-sdk",
+    "description": "gitee sdk for php",
+    "keywords": [
+        "swagger",
+        "php",
+        "sdk",
+        "api",
+        "gitee"
+    ],
+    "homepage": "http://github.com/gitee-php/gitee-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luffy",
+            "email": "lufei@simps.io"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": { "Gitee\\" : "src/" }
+    }
+}

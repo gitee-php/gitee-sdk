@@ -251,7 +251,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5NotificationsMessages**
-> \Gitee\Model\UserMessageList[] getV5NotificationsMessages($accessToken, $unread, $since, $before, $ids, $page, $perPage)
+> \Gitee\Model\UserMessage[] getV5NotificationsMessages($accessToken, $unread, $since, $before, $ids, $page, $perPage)
 
 列出授权用户的所有私信
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\UserMessageList[]**](../Model/UserMessageList.md)
+[**\Gitee\Model\UserMessage[]**](../Model/UserMessage.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5NotificationsThreads**
-> \Gitee\Model\UserNotificationList[] getV5NotificationsThreads($accessToken, $unread, $participating, $type, $since, $before, $ids, $page, $perPage)
+> \Gitee\Model\UserNotification[] getV5NotificationsThreads($accessToken, $unread, $participating, $type, $since, $before, $ids, $page, $perPage)
 
 列出授权用户的所有通知
 
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\UserNotificationList[]**](../Model/UserNotificationList.md)
+[**\Gitee\Model\UserNotification[]**](../Model/UserNotification.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoNotifications**
-> \Gitee\Model\UserNotificationList[] getV5ReposOwnerRepoNotifications($owner, $repo, $accessToken, $unread, $participating, $type, $since, $before, $ids, $page, $perPage)
+> \Gitee\Model\UserNotification[] getV5ReposOwnerRepoNotifications($owner, $repo, $accessToken, $unread, $participating, $type, $since, $before, $ids, $page, $perPage)
 
 列出一个仓库里的通知
 
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\UserNotificationList[]**](../Model/UserNotificationList.md)
+[**\Gitee\Model\UserNotification[]**](../Model/UserNotification.md)
 
 ### Authorization
 

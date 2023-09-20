@@ -1301,7 +1301,6 @@ No authorization required
 创建 Pull Request 标签  需要在请求的 body 里填上数组，元素为标签的名字。如: [\"performance\", \"bug\"]
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -1528,7 +1527,6 @@ No authorization required
 替换 Pull Request 所有标签  需要在请求的body里填上数组，元素为标签的名字。如: [\"performance\", \"bug\"]
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');

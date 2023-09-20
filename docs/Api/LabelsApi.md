@@ -193,7 +193,6 @@ No authorization required
 删除仓库标签
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -574,7 +573,6 @@ No authorization required
 创建Issue标签  需要在请求的body里填上数组，元素为标签的名字。如: [\"performance\", \"bug\"]
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -689,7 +687,6 @@ No authorization required
 添加仓库标签
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -745,7 +742,6 @@ No authorization required
 替换Issue所有标签  需要在请求的body里填上数组，元素为标签的名字。如: [\"performance\", \"bug\"]
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -803,7 +799,6 @@ No authorization required
 替换所有仓库标签
 
 ### Example
-
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');

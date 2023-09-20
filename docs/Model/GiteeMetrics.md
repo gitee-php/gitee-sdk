@@ -3,7 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **string** |  | [optional] 
+**vitality** | **int** |  | [optional] 
+**vitalityPercent** | **float** |  | [optional] 
+**community** | **int** |  | [optional] 
+**communityPercent** | **float** |  | [optional] 
+**health** | **int** |  | [optional] 
+**healthPercent** | **float** |  | [optional] 
+**trend** | **int** |  | [optional] 
+**trendPercent** | **float** |  | [optional] 
+**influence** | **int** |  | [optional] 
+**influencePercent** | **float** |  | [optional] 
 **totalScore** | **string** |  | [optional] 
 **createdAt** | **string** |  | [optional] 
 **repo** | [**\Gitee\Model\ProjectBasic**](ProjectBasic.md) |  | [optional] 

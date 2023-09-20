@@ -1,6 +1,7 @@
 # ProjectTrafficDataDesc
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bucket** | **int** | 日期,10位日期时间戳 | [optional] 

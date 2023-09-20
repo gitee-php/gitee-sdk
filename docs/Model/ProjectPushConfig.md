@@ -1,6 +1,7 @@
 # ProjectPushConfig
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **restrictPushOwnCommit** | **string** |  | [optional] 

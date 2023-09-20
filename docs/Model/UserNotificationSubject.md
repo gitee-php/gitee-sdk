@@ -1,6 +1,7 @@
 # UserNotificationSubject
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **title** | **string** |  | [optional] 

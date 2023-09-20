@@ -1,6 +1,7 @@
 # GiteeMetrics
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **vitality** | **int** |  | [optional] 

@@ -1,6 +1,7 @@
 # NamespaceMini
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | namespace id | [optional] 

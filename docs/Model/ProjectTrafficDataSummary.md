@@ -1,6 +1,7 @@
 # ProjectTrafficDataSummary
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ip** | **int** | 浏览次数 | [optional] 

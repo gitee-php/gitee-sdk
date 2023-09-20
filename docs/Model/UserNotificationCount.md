@@ -1,6 +1,7 @@
 # UserNotificationCount
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **totalCount** | **int** | 通知总数 | [optional] 

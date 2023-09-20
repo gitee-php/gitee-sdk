@@ -1,6 +1,7 @@
 # GroupFollowers
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **self** | [**\Gitee\Model\UserBasic**](UserBasic.md) |  | [optional] 

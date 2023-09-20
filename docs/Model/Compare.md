@@ -1,6 +1,7 @@
 # Compare
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **baseCommit** | **string** |  | [optional] 

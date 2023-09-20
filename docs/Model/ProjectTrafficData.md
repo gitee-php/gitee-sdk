@@ -1,6 +1,7 @@
 # ProjectTrafficData
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **counts** | [**\Gitee\Model\ProjectTrafficDataDesc[]**](ProjectTrafficDataDesc.md) | 每天的访问量数据集 | [optional] 

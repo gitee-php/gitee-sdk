@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | [optional] 
+**id** | **int** |  | [optional] 
 **body** | **string** |  | [optional] 
-**createdAt** | **string** |  | [optional] 
-**updatedAt** | **string** |  | [optional] 
+**createdAt** | [**\DateTime**](https://www.php.net/class.datetime) |  | [optional] 
+**updatedAt** | [**\DateTime**](https://www.php.net/class.datetime) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

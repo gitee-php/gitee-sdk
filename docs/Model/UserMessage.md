@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **sender** | [**\Gitee\Model\UserBasic**](UserBasic.md) | 发送者 | [optional] 
-**unread** | **string** |  | [optional] 
+**unread** | **bool** |  | [optional] 
 **content** | **string** |  | [optional] 
-**updatedAt** | **string** |  | [optional] 
+**updatedAt** | [**\DateTime**](https://www.php.net/class.datetime) |  | [optional] 
 **url** | **string** |  | [optional] 
 **htmlUrl** | **string** |  | [optional] 
 

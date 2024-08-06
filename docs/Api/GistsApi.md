@@ -674,7 +674,7 @@ $apiInstance = new Gitee\Api\GistsApi(
 );
 $id = "id_example"; // string | 代码片段的ID
 $accessToken = "accessToken_example"; // string | 用户授权码
-$files = array('key' => "files_example"); // map[string,string] | Hash形式的代码片段文件名以及文件内容。如: { \"file1.txt\": { \"content\": \"String file contents\" } }
+$files = array("files_example"); // string[] | Hash形式的代码片段文件名以及文件内容。如: { \"file1.txt\": { \"content\": \"String file contents\" } }
 $description = "description_example"; // string | 代码片段描述，1~30个字符
 
 try {
@@ -692,7 +692,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| 代码片段的ID |
  **accessToken** | **string**| 用户授权码 | [optional]
- **files** | [**map[string,string]**](../Model/string.md)| Hash形式的代码片段文件名以及文件内容。如: { \&quot;file1.txt\&quot;: { \&quot;content\&quot;: \&quot;String file contents\&quot; } } | [optional]
+ **files** | [**string[]**](../Model/string.md)| Hash形式的代码片段文件名以及文件内容。如: { \&quot;file1.txt\&quot;: { \&quot;content\&quot;: \&quot;String file contents\&quot; } } | [optional]
  **description** | **string**| 代码片段描述，1~30个字符 | [optional]
 
 ### Return type
@@ -727,7 +727,7 @@ $apiInstance = new Gitee\Api\GistsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$files = array('key' => "files_example"); // map[string,string] | Hash形式的代码片段文件名以及文件内容。如: { \"file1.txt\": { \"content\": \"String file contents\" } }
+$files = array("files_example"); // string[] | Hash形式的代码片段文件名以及文件内容。如: { \"file1.txt\": { \"content\": \"String file contents\" } }
 $description = "description_example"; // string | 代码片段描述，1~30个字符
 $accessToken = "accessToken_example"; // string | 用户授权码
 $public = true; // bool | 公开/私有，默认: 私有
@@ -745,7 +745,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **files** | [**map[string,string]**](../Model/string.md)| Hash形式的代码片段文件名以及文件内容。如: { \&quot;file1.txt\&quot;: { \&quot;content\&quot;: \&quot;String file contents\&quot; } } |
+ **files** | [**string[]**](../Model/string.md)| Hash形式的代码片段文件名以及文件内容。如: { \&quot;file1.txt\&quot;: { \&quot;content\&quot;: \&quot;String file contents\&quot; } } |
  **description** | **string**| 代码片段描述，1~30个字符 |
  **accessToken** | **string**| 用户授权码 | [optional]
  **public** | **bool**| 公开/私有，默认: 私有 | [optional]

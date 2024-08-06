@@ -123,7 +123,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5OrgsOrg**
-> \Gitee\Model\Group getV5OrgsOrg($org, $accessToken)
+> \Gitee\Model\GroupDetail getV5OrgsOrg($org, $accessToken)
 
 获取一个组织
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Group**](../Model/Group.md)
+[**\Gitee\Model\GroupDetail**](../Model/GroupDetail.md)
 
 ### Authorization
 

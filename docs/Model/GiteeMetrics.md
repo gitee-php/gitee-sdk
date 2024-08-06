@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **trendPercent** | **float** |  | [optional] 
 **influence** | **int** |  | [optional] 
 **influencePercent** | **float** |  | [optional] 
-**totalScore** | **string** |  | [optional] 
-**createdAt** | **string** |  | [optional] 
+**totalScore** | **int** |  | [optional] 
+**createdAt** | [**\DateTime**](https://www.php.net/class.datetime) |  | [optional] 
 **repo** | [**\Gitee\Model\ProjectBasic**](ProjectBasic.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

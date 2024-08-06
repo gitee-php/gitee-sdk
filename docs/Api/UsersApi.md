@@ -434,7 +434,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5UserNamespace**
-> \Gitee\Model\ModelNamespace[] getV5UserNamespace($path, $accessToken)
+> \Gitee\Model\ModelNamespace getV5UserNamespace($path, $accessToken)
 
 获取授权用户的一个 Namespace
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\ModelNamespace[]**](../Model/ModelNamespace.md)
+[**\Gitee\Model\ModelNamespace**](../Model/ModelNamespace.md)
 
 ### Authorization
 

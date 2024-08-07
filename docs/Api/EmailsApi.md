@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getV5Emails**
-> \Gitee\Model\UserEmail getV5Emails($accessToken)
+> \Gitee\Model\UserEmail[] getV5Emails($accessToken)
 
 获取授权用户的全部邮箱
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\UserEmail**](../Model/UserEmail.md)
+[**\Gitee\Model\UserEmail[]**](../Model/UserEmail.md)
 
 ### Authorization
 

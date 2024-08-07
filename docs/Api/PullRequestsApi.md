@@ -258,7 +258,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoPulls**
-> \Gitee\Model\PullRequest[] getV5ReposOwnerRepoPulls($owner, $repo, $accessToken, $state, $head, $base, $sort, $since, $direction, $milestoneNumber, $labels, $page, $perPage)
+> \Gitee\Model\PullRequest[] getV5ReposOwnerRepoPulls($owner, $repo, $accessToken, $state, $head, $base, $sort, $since, $direction, $milestoneNumber, $labels, $page, $perPage, $author, $assignee, $tester)
 
 获取Pull Request列表
 
@@ -287,9 +287,12 @@ $milestoneNumber = 56; // int | 可选。里程碑序号(id)
 $labels = "labels_example"; // string | 用逗号分开的标签。如: bug,performance
 $page = 1; // int | 当前的页码
 $perPage = 20; // int | 每页的数量，最大为 100
+$author = "author_example"; // string | 可选。PR 创建者用户名
+$assignee = "assignee_example"; // string | 可选。评审者用户名
+$tester = "tester_example"; // string | 可选。测试者用户名
 
 try {
-    $result = $apiInstance->getV5ReposOwnerRepoPulls($owner, $repo, $accessToken, $state, $head, $base, $sort, $since, $direction, $milestoneNumber, $labels, $page, $perPage);
+    $result = $apiInstance->getV5ReposOwnerRepoPulls($owner, $repo, $accessToken, $state, $head, $base, $sort, $since, $direction, $milestoneNumber, $labels, $page, $perPage, $author, $assignee, $tester);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PullRequestsApi->getV5ReposOwnerRepoPulls: ', $e->getMessage(), PHP_EOL;
@@ -314,6 +317,9 @@ Name | Type | Description  | Notes
  **labels** | **string**| 用逗号分开的标签。如: bug,performance | [optional]
  **page** | **int**| 当前的页码 | [optional] [default to 1]
  **perPage** | **int**| 每页的数量，最大为 100 | [optional] [default to 20]
+ **author** | **string**| 可选。PR 创建者用户名 | [optional]
+ **assignee** | **string**| 可选。评审者用户名 | [optional]
+ **tester** | **string**| 可选。测试者用户名 | [optional]
 
 ### Return type
 
@@ -786,7 +792,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoPullsNumberOperateLogs**
-> \Gitee\Model\OperateLog getV5ReposOwnerRepoPullsNumberOperateLogs($owner, $repo, $number, $accessToken, $sort)
+> \Gitee\Model\OperateLog[] getV5ReposOwnerRepoPullsNumberOperateLogs($owner, $repo, $number, $accessToken, $sort)
 
 获取某个Pull Request的操作日志
 
@@ -829,7 +835,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\OperateLog**](../Model/OperateLog.md)
+[**\Gitee\Model\OperateLog[]**](../Model/OperateLog.md)
 
 ### Authorization
 
@@ -900,7 +906,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchV5ReposOwnerRepoPullsNumber**
-> \Gitee\Model\PullRequest patchV5ReposOwnerRepoPullsNumber($owner, $repo, $number, $accessToken, $title, $body, $state, $milestoneNumber, $labels, $assigneesNumber, $testersNumber, $refPullRequestNumbers, $draft, $squash)
+> \Gitee\Model\PullRequest patchV5ReposOwnerRepoPullsNumber($owner, $repo, $number, $accessToken, $title, $body, $state, $milestoneNumber, $labels, $assigneesNumber, $testersNumber, $refPullRequestNumbers, $closeRelatedIssue, $draft, $squash)
 
 更新Pull Request信息
 
@@ -928,11 +934,12 @@ $labels = "labels_example"; // string | 用逗号分开的标签，名称要求�
 $assigneesNumber = 56; // int | 可选。最少审查人数
 $testersNumber = 56; // int | 可选。最少测试人数
 $refPullRequestNumbers = "refPullRequestNumbers_example"; // string | 可选。依赖的当前仓库下的PR编号，置空则清空依赖的PR。如：17,18,19
+$closeRelatedIssue = true; // bool | 可选，合并后是否关闭关联的 Issue，默认根据仓库配置设置
 $draft = true; // bool | 是否设置为草稿
 $squash = true; // bool | 接受 Pull Request 时使用扁平化（Squash）合并
 
 try {
-    $result = $apiInstance->patchV5ReposOwnerRepoPullsNumber($owner, $repo, $number, $accessToken, $title, $body, $state, $milestoneNumber, $labels, $assigneesNumber, $testersNumber, $refPullRequestNumbers, $draft, $squash);
+    $result = $apiInstance->patchV5ReposOwnerRepoPullsNumber($owner, $repo, $number, $accessToken, $title, $body, $state, $milestoneNumber, $labels, $assigneesNumber, $testersNumber, $refPullRequestNumbers, $closeRelatedIssue, $draft, $squash);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PullRequestsApi->patchV5ReposOwnerRepoPullsNumber: ', $e->getMessage(), PHP_EOL;
@@ -956,6 +963,7 @@ Name | Type | Description  | Notes
  **assigneesNumber** | **int**| 可选。最少审查人数 | [optional]
  **testersNumber** | **int**| 可选。最少测试人数 | [optional]
  **refPullRequestNumbers** | **string**| 可选。依赖的当前仓库下的PR编号，置空则清空依赖的PR。如：17,18,19 | [optional]
+ **closeRelatedIssue** | **bool**| 可选，合并后是否关闭关联的 Issue，默认根据仓库配置设置 | [optional]
  **draft** | **bool**| 是否设置为草稿 | [optional]
  **squash** | **bool**| 接受 Pull Request 时使用扁平化（Squash）合并 | [optional]
 
@@ -1294,7 +1302,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postV5ReposOwnerRepoPullsNumberLabels**
-> \Gitee\Model\Label postV5ReposOwnerRepoPullsNumberLabels($owner, $repo, $number, $body, $accessToken)
+> \Gitee\Model\Label[] postV5ReposOwnerRepoPullsNumberLabels($owner, $repo, $number, $body, $accessToken)
 
 创建 Pull Request 标签
 
@@ -1337,7 +1345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Label**](../Model/Label.md)
+[**\Gitee\Model\Label[]**](../Model/Label.md)
 
 ### Authorization
 
@@ -1520,7 +1528,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putV5ReposOwnerRepoPullsNumberLabels**
-> \Gitee\Model\Label putV5ReposOwnerRepoPullsNumberLabels($owner, $repo, $number, $body, $accessToken)
+> \Gitee\Model\Label[] putV5ReposOwnerRepoPullsNumberLabels($owner, $repo, $number, $body, $accessToken)
 
 替换 Pull Request 所有标签
 
@@ -1563,7 +1571,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Label**](../Model/Label.md)
+[**\Gitee\Model\Label[]**](../Model/Label.md)
 
 ### Authorization
 

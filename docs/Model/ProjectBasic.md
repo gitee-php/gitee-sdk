@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **description** | **string** | 仓库描述 | [optional] 
 **private** | **bool** | 是否私有 | [optional] 
 **public** | **bool** | 是否公开 | [optional] 
-**internal** | **string** | 是否内部开源 | [optional] 
+**internal** | **bool** | 是否内部开源 | [optional] 
 **fork** | **bool** | 是否是fork仓库 | [optional] 
 **htmlUrl** | **string** |  | [optional] 
 **sshUrl** | **string** |  | [optional] 

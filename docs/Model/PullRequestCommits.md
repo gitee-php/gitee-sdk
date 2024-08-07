@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **htmlUrl** | **string** |  | [optional] 
 **commentsUrl** | **string** |  | [optional] 
 **commit** | **string** |  | [optional] 
-**author** | **string** |  | [optional] 
+**author** | [**\Gitee\Model\UserBasic**](UserBasic.md) |  | [optional] 
 **committer** | **string** |  | [optional] 
 **parents** | [**\Gitee\Model\CommitParentsBasic**](CommitParentsBasic.md) |  | [optional] 
 

@@ -11,17 +11,9 @@ PHP 5.5 and later
 ## Installation & Usage
 ### Composer
 
-To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
-
+```bash
+composer require gitee-php/gitee-sdk
 ```
-{
-  "require": {
-    "gitee-php/gitee-sdk": "^5.4"
-  }
-}
-```
-
-Then run `composer install`
 
 ### Manual Installation
 
@@ -120,6 +112,11 @@ Class | Method | HTTP request | Description
 *ActivityApi* | [**putV5ReposOwnerRepoNotifications**](docs/Api/ActivityApi.md#putv5reposownerreponotifications) | **PUT** /v5/repos/{owner}/{repo}/notifications | 标记一个仓库里的通知为已读
 *ActivityApi* | [**putV5UserStarredOwnerRepo**](docs/Api/ActivityApi.md#putv5userstarredownerrepo) | **PUT** /v5/user/starred/{owner}/{repo} | star 一个仓库
 *ActivityApi* | [**putV5UserSubscriptionsOwnerRepo**](docs/Api/ActivityApi.md#putv5usersubscriptionsownerrepo) | **PUT** /v5/user/subscriptions/{owner}/{repo} | watch 一个仓库
+*ChecksApi* | [**getV5ReposOwnerRepoCheckRunsCheckRunId**](docs/Api/ChecksApi.md#getv5reposownerrepocheckrunscheckrunid) | **GET** /v5/repos/{owner}/{repo}/check-runs/{check_run_id} | 获取检查项详情
+*ChecksApi* | [**getV5ReposOwnerRepoCheckRunsCheckRunIdAnnotations**](docs/Api/ChecksApi.md#getv5reposownerrepocheckrunscheckrunidannotations) | **GET** /v5/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations | 获取检查项代码注释
+*ChecksApi* | [**getV5ReposOwnerRepoCommitsRefCheckRuns**](docs/Api/ChecksApi.md#getv5reposownerrepocommitsrefcheckruns) | **GET** /v5/repos/{owner}/{repo}/commits/{ref}/check-runs | 获取某个提交的检查项
+*ChecksApi* | [**patchV5ReposOwnerRepoCheckRunsCheckRunId**](docs/Api/ChecksApi.md#patchv5reposownerrepocheckrunscheckrunid) | **PATCH** /v5/repos/{owner}/{repo}/check-runs/{check_run_id} | 更新检查项
+*ChecksApi* | [**postV5ReposOwnerRepoCheckRuns**](docs/Api/ChecksApi.md#postv5reposownerrepocheckruns) | **POST** /v5/repos/{owner}/{repo}/check-runs | 创建检查项
 *EmailsApi* | [**getV5Emails**](docs/Api/EmailsApi.md#getv5emails) | **GET** /v5/emails | 获取授权用户的全部邮箱
 *EnterprisesApi* | [**deleteV5EnterprisesEnterpriseMembersUsername**](docs/Api/EnterprisesApi.md#deletev5enterprisesenterprisemembersusername) | **DELETE** /v5/enterprises/{enterprise}/members/{username} | 移除企业成员
 *EnterprisesApi* | [**deleteV5EnterprisesEnterpriseWeekReportsReportIdCommentsId**](docs/Api/EnterprisesApi.md#deletev5enterprisesenterpriseweekreportsreportidcommentsid) | **DELETE** /v5/enterprises/{enterprise}/week_reports/{report_id}/comments/{id} | 删除周报某个评论
@@ -188,6 +185,7 @@ Class | Method | HTTP request | Description
 *LabelsApi* | [**getV5ReposOwnerRepoIssuesNumberLabels**](docs/Api/LabelsApi.md#getv5reposownerrepoissuesnumberlabels) | **GET** /v5/repos/{owner}/{repo}/issues/{number}/labels | 获取仓库任务的所有标签
 *LabelsApi* | [**getV5ReposOwnerRepoLabels**](docs/Api/LabelsApi.md#getv5reposownerrepolabels) | **GET** /v5/repos/{owner}/{repo}/labels | 获取仓库所有任务标签
 *LabelsApi* | [**getV5ReposOwnerRepoLabelsName**](docs/Api/LabelsApi.md#getv5reposownerrepolabelsname) | **GET** /v5/repos/{owner}/{repo}/labels/{name} | 根据标签名称获取单个标签
+*LabelsApi* | [**getV5ReposOwnerRepoProjectLabels**](docs/Api/LabelsApi.md#getv5reposownerrepoprojectlabels) | **GET** /v5/repos/{owner}/{repo}/project_labels | 获取仓库所有标签
 *LabelsApi* | [**patchV5ReposOwnerRepoLabelsOriginalName**](docs/Api/LabelsApi.md#patchv5reposownerrepolabelsoriginalname) | **PATCH** /v5/repos/{owner}/{repo}/labels/{original_name} | 更新一个仓库任务标签
 *LabelsApi* | [**postV5ReposOwnerRepoIssuesNumberLabels**](docs/Api/LabelsApi.md#postv5reposownerrepoissuesnumberlabels) | **POST** /v5/repos/{owner}/{repo}/issues/{number}/labels | 创建Issue标签
 *LabelsApi* | [**postV5ReposOwnerRepoLabels**](docs/Api/LabelsApi.md#postv5reposownerrepolabels) | **POST** /v5/repos/{owner}/{repo}/labels | 创建仓库任务标签
@@ -252,28 +250,30 @@ Class | Method | HTTP request | Description
 *RepositoriesApi* | [**deleteV5ReposOwnerRepo**](docs/Api/RepositoriesApi.md#deletev5reposownerrepo) | **DELETE** /v5/repos/{owner}/{repo} | 删除一个仓库
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoBaiduStatisticKey**](docs/Api/RepositoriesApi.md#deletev5reposownerrepobaidustatistickey) | **DELETE** /v5/repos/{owner}/{repo}/baidu_statistic_key | 删除仓库的百度统计 key
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoBranchesBranchProtection**](docs/Api/RepositoriesApi.md#deletev5reposownerrepobranchesbranchprotection) | **DELETE** /v5/repos/{owner}/{repo}/branches/{branch}/protection | 取消保护分支的设置
-*RepositoriesApi* | [**deleteV5ReposOwnerRepoBranchesWildcardSetting**](docs/Api/RepositoriesApi.md#deletev5reposownerrepobrancheswildcardsetting) | **DELETE** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 删除仓库保护分支策略
+*RepositoriesApi* | [**deleteV5ReposOwnerRepoBranchesWildcardSetting**](docs/Api/RepositoriesApi.md#deletev5reposownerrepobrancheswildcardsetting) | **DELETE** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 删除保护分支规则
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoCollaboratorsUsername**](docs/Api/RepositoriesApi.md#deletev5reposownerrepocollaboratorsusername) | **DELETE** /v5/repos/{owner}/{repo}/collaborators/{username} | 移除仓库成员
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoCommentsId**](docs/Api/RepositoriesApi.md#deletev5reposownerrepocommentsid) | **DELETE** /v5/repos/{owner}/{repo}/comments/{id} | 删除Commit评论
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoContentsPath**](docs/Api/RepositoriesApi.md#deletev5reposownerrepocontentspath) | **DELETE** /v5/repos/{owner}/{repo}/contents/{path} | 删除文件
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoKeysEnableId**](docs/Api/RepositoriesApi.md#deletev5reposownerrepokeysenableid) | **DELETE** /v5/repos/{owner}/{repo}/keys/enable/{id} | 停用仓库公钥
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoKeysId**](docs/Api/RepositoriesApi.md#deletev5reposownerrepokeysid) | **DELETE** /v5/repos/{owner}/{repo}/keys/{id} | 删除一个仓库公钥
 *RepositoriesApi* | [**deleteV5ReposOwnerRepoReleasesId**](docs/Api/RepositoriesApi.md#deletev5reposownerreporeleasesid) | **DELETE** /v5/repos/{owner}/{repo}/releases/{id} | 删除仓库Release
+*RepositoriesApi* | [**deleteV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId**](docs/Api/RepositoriesApi.md#deletev5reposownerreporeleasesreleaseidattachfilesattachfileid) | **DELETE** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files/{attach_file_id} | 删除仓库下指定 Release 的指定附件
 *RepositoriesApi* | [**getV5EnterprisesEnterpriseRepos**](docs/Api/RepositoriesApi.md#getv5enterprisesenterpriserepos) | **GET** /v5/enterprises/{enterprise}/repos | 获取企业的所有仓库
 *RepositoriesApi* | [**getV5OrgsOrgRepos**](docs/Api/RepositoriesApi.md#getv5orgsorgrepos) | **GET** /v5/orgs/{org}/repos | 获取一个组织的仓库
 *RepositoriesApi* | [**getV5ReposOwnerRepo**](docs/Api/RepositoriesApi.md#getv5reposownerrepo) | **GET** /v5/repos/{owner}/{repo} | 获取用户的某个仓库
 *RepositoriesApi* | [**getV5ReposOwnerRepoBaiduStatisticKey**](docs/Api/RepositoriesApi.md#getv5reposownerrepobaidustatistickey) | **GET** /v5/repos/{owner}/{repo}/baidu_statistic_key | 获取仓库的百度统计 key
+*RepositoriesApi* | [**getV5ReposOwnerRepoBlamePath**](docs/Api/RepositoriesApi.md#getv5reposownerrepoblamepath) | **GET** /v5/repos/{owner}/{repo}/blame/{path} | Blame
 *RepositoriesApi* | [**getV5ReposOwnerRepoBranches**](docs/Api/RepositoriesApi.md#getv5reposownerrepobranches) | **GET** /v5/repos/{owner}/{repo}/branches | 获取所有分支
 *RepositoriesApi* | [**getV5ReposOwnerRepoBranchesBranch**](docs/Api/RepositoriesApi.md#getv5reposownerrepobranchesbranch) | **GET** /v5/repos/{owner}/{repo}/branches/{branch} | 获取单个分支
 *RepositoriesApi* | [**getV5ReposOwnerRepoCollaborators**](docs/Api/RepositoriesApi.md#getv5reposownerrepocollaborators) | **GET** /v5/repos/{owner}/{repo}/collaborators | 获取仓库的所有成员
 *RepositoriesApi* | [**getV5ReposOwnerRepoCollaboratorsUsername**](docs/Api/RepositoriesApi.md#getv5reposownerrepocollaboratorsusername) | **GET** /v5/repos/{owner}/{repo}/collaborators/{username} | 判断用户是否为仓库成员
 *RepositoriesApi* | [**getV5ReposOwnerRepoCollaboratorsUsernamePermission**](docs/Api/RepositoriesApi.md#getv5reposownerrepocollaboratorsusernamepermission) | **GET** /v5/repos/{owner}/{repo}/collaborators/{username}/permission | 查看仓库成员的权限
-*RepositoriesApi* | [**getV5ReposOwnerRepoComments**](docs/Api/RepositoriesApi.md#getv5reposownerrepocomments) | **GET** /v5/repos/{owner}/{repo}/comments | 获取仓库的Commit评论
+*RepositoriesApi* | [**getV5ReposOwnerRepoComments**](docs/Api/RepositoriesApi.md#getv5reposownerrepocomments) | **GET** /v5/repos/{owner}/{repo}/comments | 获取仓库的 Commit 评论
 *RepositoriesApi* | [**getV5ReposOwnerRepoCommentsId**](docs/Api/RepositoriesApi.md#getv5reposownerrepocommentsid) | **GET** /v5/repos/{owner}/{repo}/comments/{id} | 获取仓库的某条Commit评论
 *RepositoriesApi* | [**getV5ReposOwnerRepoCommits**](docs/Api/RepositoriesApi.md#getv5reposownerrepocommits) | **GET** /v5/repos/{owner}/{repo}/commits | 仓库的所有提交
 *RepositoriesApi* | [**getV5ReposOwnerRepoCommitsRefComments**](docs/Api/RepositoriesApi.md#getv5reposownerrepocommitsrefcomments) | **GET** /v5/repos/{owner}/{repo}/commits/{ref}/comments | 获取单个Commit的评论
 *RepositoriesApi* | [**getV5ReposOwnerRepoCommitsSha**](docs/Api/RepositoriesApi.md#getv5reposownerrepocommitssha) | **GET** /v5/repos/{owner}/{repo}/commits/{sha} | 仓库的某个提交
-*RepositoriesApi* | [**getV5ReposOwnerRepoCompareBaseHead**](docs/Api/RepositoriesApi.md#getv5reposownerrepocomparebasehead) | **GET** /v5/repos/{owner}/{repo}/compare/{base}...{head} | 两个Commits之间对比的版本差异
+*RepositoriesApi* | [**getV5ReposOwnerRepoCompareBaseHead**](docs/Api/RepositoriesApi.md#getv5reposownerrepocomparebasehead) | **GET** /v5/repos/{owner}/{repo}/compare/{base}...{head} | Commits 对比
 *RepositoriesApi* | [**getV5ReposOwnerRepoContentsPath**](docs/Api/RepositoriesApi.md#getv5reposownerrepocontentspath) | **GET** /v5/repos/{owner}/{repo}/contents(/{path}) | 获取仓库具体路径下的内容
 *RepositoriesApi* | [**getV5ReposOwnerRepoContributors**](docs/Api/RepositoriesApi.md#getv5reposownerrepocontributors) | **GET** /v5/repos/{owner}/{repo}/contributors | 获取仓库贡献者
 *RepositoriesApi* | [**getV5ReposOwnerRepoForks**](docs/Api/RepositoriesApi.md#getv5reposownerrepoforks) | **GET** /v5/repos/{owner}/{repo}/forks | 查看仓库的Forks
@@ -282,12 +282,18 @@ Class | Method | HTTP request | Description
 *RepositoriesApi* | [**getV5ReposOwnerRepoKeysId**](docs/Api/RepositoriesApi.md#getv5reposownerrepokeysid) | **GET** /v5/repos/{owner}/{repo}/keys/{id} | 获取仓库的单个公钥
 *RepositoriesApi* | [**getV5ReposOwnerRepoPages**](docs/Api/RepositoriesApi.md#getv5reposownerrepopages) | **GET** /v5/repos/{owner}/{repo}/pages | 获取Pages信息
 *RepositoriesApi* | [**getV5ReposOwnerRepoPushConfig**](docs/Api/RepositoriesApi.md#getv5reposownerrepopushconfig) | **GET** /v5/repos/{owner}/{repo}/push_config | 获取仓库推送规则设置
+*RepositoriesApi* | [**getV5ReposOwnerRepoRawPath**](docs/Api/RepositoriesApi.md#getv5reposownerreporawpath) | **GET** /v5/repos/{owner}/{repo}/raw/{path} | 获取 raw 文件（100MB 以内）
 *RepositoriesApi* | [**getV5ReposOwnerRepoReadme**](docs/Api/RepositoriesApi.md#getv5reposownerreporeadme) | **GET** /v5/repos/{owner}/{repo}/readme | 获取仓库README
 *RepositoriesApi* | [**getV5ReposOwnerRepoReleases**](docs/Api/RepositoriesApi.md#getv5reposownerreporeleases) | **GET** /v5/repos/{owner}/{repo}/releases | 获取仓库的所有Releases
 *RepositoriesApi* | [**getV5ReposOwnerRepoReleasesId**](docs/Api/RepositoriesApi.md#getv5reposownerreporeleasesid) | **GET** /v5/repos/{owner}/{repo}/releases/{id} | 获取仓库的单个Releases
 *RepositoriesApi* | [**getV5ReposOwnerRepoReleasesLatest**](docs/Api/RepositoriesApi.md#getv5reposownerreporeleaseslatest) | **GET** /v5/repos/{owner}/{repo}/releases/latest | 获取仓库的最后更新的Release
+*RepositoriesApi* | [**getV5ReposOwnerRepoReleasesReleaseIdAttachFiles**](docs/Api/RepositoriesApi.md#getv5reposownerreporeleasesreleaseidattachfiles) | **GET** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files | 获取仓库下的指定 Release 的所有附件
+*RepositoriesApi* | [**getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId**](docs/Api/RepositoriesApi.md#getv5reposownerreporeleasesreleaseidattachfilesattachfileid) | **GET** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files/{attach_file_id} | 获取仓库下指定 Release 的单个附件
+*RepositoriesApi* | [**getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileIdDownload**](docs/Api/RepositoriesApi.md#getv5reposownerreporeleasesreleaseidattachfilesattachfileiddownload) | **GET** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files/{attach_file_id}/download | 下载指定 Release 的单个附件
 *RepositoriesApi* | [**getV5ReposOwnerRepoReleasesTagsTag**](docs/Api/RepositoriesApi.md#getv5reposownerreporeleasestagstag) | **GET** /v5/repos/{owner}/{repo}/releases/tags/{tag} | 根据Tag名称获取仓库的Release
-*RepositoriesApi* | [**getV5ReposOwnerRepoTags**](docs/Api/RepositoriesApi.md#getv5reposownerrepotags) | **GET** /v5/repos/{owner}/{repo}/tags | 列出仓库所有的tags
+*RepositoriesApi* | [**getV5ReposOwnerRepoTags**](docs/Api/RepositoriesApi.md#getv5reposownerrepotags) | **GET** /v5/repos/{owner}/{repo}/tags | 列出仓库所有的 tags
+*RepositoriesApi* | [**getV5ReposOwnerRepoTarball**](docs/Api/RepositoriesApi.md#getv5reposownerrepotarball) | **GET** /v5/repos/{owner}/{repo}/tarball | 下载仓库 tar.gz
+*RepositoriesApi* | [**getV5ReposOwnerRepoZipball**](docs/Api/RepositoriesApi.md#getv5reposownerrepozipball) | **GET** /v5/repos/{owner}/{repo}/zipball | 下载仓库 zip
 *RepositoriesApi* | [**getV5UserRepos**](docs/Api/RepositoriesApi.md#getv5userrepos) | **GET** /v5/user/repos | 列出授权用户的所有仓库
 *RepositoriesApi* | [**getV5UsersUsernameRepos**](docs/Api/RepositoriesApi.md#getv5usersusernamerepos) | **GET** /v5/users/{username}/repos | 获取某个用户的公开仓库
 *RepositoriesApi* | [**patchV5ReposOwnerRepo**](docs/Api/RepositoriesApi.md#patchv5reposownerrepo) | **PATCH** /v5/repos/{owner}/{repo} | 更新仓库设置
@@ -297,6 +303,7 @@ Class | Method | HTTP request | Description
 *RepositoriesApi* | [**postV5OrgsOrgRepos**](docs/Api/RepositoriesApi.md#postv5orgsorgrepos) | **POST** /v5/orgs/{org}/repos | 创建组织仓库
 *RepositoriesApi* | [**postV5ReposOwnerRepoBaiduStatisticKey**](docs/Api/RepositoriesApi.md#postv5reposownerrepobaidustatistickey) | **POST** /v5/repos/{owner}/{repo}/baidu_statistic_key | 设置/更新仓库的百度统计 key
 *RepositoriesApi* | [**postV5ReposOwnerRepoBranches**](docs/Api/RepositoriesApi.md#postv5reposownerrepobranches) | **POST** /v5/repos/{owner}/{repo}/branches | 创建分支
+*RepositoriesApi* | [**postV5ReposOwnerRepoCommits**](docs/Api/RepositoriesApi.md#postv5reposownerrepocommits) | **POST** /v5/repos/{owner}/{repo}/commits | 提交多个文件变更
 *RepositoriesApi* | [**postV5ReposOwnerRepoCommitsShaComments**](docs/Api/RepositoriesApi.md#postv5reposownerrepocommitsshacomments) | **POST** /v5/repos/{owner}/{repo}/commits/{sha}/comments | 创建Commit评论
 *RepositoriesApi* | [**postV5ReposOwnerRepoContentsPath**](docs/Api/RepositoriesApi.md#postv5reposownerrepocontentspath) | **POST** /v5/repos/{owner}/{repo}/contents/{path} | 新建文件
 *RepositoriesApi* | [**postV5ReposOwnerRepoForks**](docs/Api/RepositoriesApi.md#postv5reposownerrepoforks) | **POST** /v5/repos/{owner}/{repo}/forks | Fork一个仓库
@@ -304,14 +311,15 @@ Class | Method | HTTP request | Description
 *RepositoriesApi* | [**postV5ReposOwnerRepoOpen**](docs/Api/RepositoriesApi.md#postv5reposownerrepoopen) | **POST** /v5/repos/{owner}/{repo}/open | 开通Gitee Go
 *RepositoriesApi* | [**postV5ReposOwnerRepoPagesBuilds**](docs/Api/RepositoriesApi.md#postv5reposownerrepopagesbuilds) | **POST** /v5/repos/{owner}/{repo}/pages/builds | 请求建立Pages
 *RepositoriesApi* | [**postV5ReposOwnerRepoReleases**](docs/Api/RepositoriesApi.md#postv5reposownerreporeleases) | **POST** /v5/repos/{owner}/{repo}/releases | 创建仓库Release
+*RepositoriesApi* | [**postV5ReposOwnerRepoReleasesReleaseIdAttachFiles**](docs/Api/RepositoriesApi.md#postv5reposownerreporeleasesreleaseidattachfiles) | **POST** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files | 上传附件到仓库指定 Release
 *RepositoriesApi* | [**postV5ReposOwnerRepoTags**](docs/Api/RepositoriesApi.md#postv5reposownerrepotags) | **POST** /v5/repos/{owner}/{repo}/tags | 创建一个仓库的 Tag
 *RepositoriesApi* | [**postV5ReposOwnerRepoTrafficData**](docs/Api/RepositoriesApi.md#postv5reposownerrepotrafficdata) | **POST** /v5/repos/{owner}/{repo}/traffic-data | 获取最近30天的七日以内访问量
 *RepositoriesApi* | [**postV5UserRepos**](docs/Api/RepositoriesApi.md#postv5userrepos) | **POST** /v5/user/repos | 创建一个仓库
 *RepositoriesApi* | [**putV5ReposOwnerRepoBranchesBranchProtection**](docs/Api/RepositoriesApi.md#putv5reposownerrepobranchesbranchprotection) | **PUT** /v5/repos/{owner}/{repo}/branches/{branch}/protection | 设置分支保护
-*RepositoriesApi* | [**putV5ReposOwnerRepoBranchesSettingNew**](docs/Api/RepositoriesApi.md#putv5reposownerrepobranchessettingnew) | **PUT** /v5/repos/{owner}/{repo}/branches/setting/new | 新建仓库保护分支策略
-*RepositoriesApi* | [**putV5ReposOwnerRepoBranchesWildcardSetting**](docs/Api/RepositoriesApi.md#putv5reposownerrepobrancheswildcardsetting) | **PUT** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 分支保护策略设置
+*RepositoriesApi* | [**putV5ReposOwnerRepoBranchesSettingNew**](docs/Api/RepositoriesApi.md#putv5reposownerrepobranchessettingnew) | **PUT** /v5/repos/{owner}/{repo}/branches/setting/new | 新建保护分支规则
+*RepositoriesApi* | [**putV5ReposOwnerRepoBranchesWildcardSetting**](docs/Api/RepositoriesApi.md#putv5reposownerrepobrancheswildcardsetting) | **PUT** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 更新保护分支规则
 *RepositoriesApi* | [**putV5ReposOwnerRepoClear**](docs/Api/RepositoriesApi.md#putv5reposownerrepoclear) | **PUT** /v5/repos/{owner}/{repo}/clear | 清空一个仓库
-*RepositoriesApi* | [**putV5ReposOwnerRepoCollaboratorsUsername**](docs/Api/RepositoriesApi.md#putv5reposownerrepocollaboratorsusername) | **PUT** /v5/repos/{owner}/{repo}/collaborators/{username} | 添加仓库成员
+*RepositoriesApi* | [**putV5ReposOwnerRepoCollaboratorsUsername**](docs/Api/RepositoriesApi.md#putv5reposownerrepocollaboratorsusername) | **PUT** /v5/repos/{owner}/{repo}/collaborators/{username} | 添加仓库成员或更新仓库成员权限
 *RepositoriesApi* | [**putV5ReposOwnerRepoContentsPath**](docs/Api/RepositoriesApi.md#putv5reposownerrepocontentspath) | **PUT** /v5/repos/{owner}/{repo}/contents/{path} | 更新文件
 *RepositoriesApi* | [**putV5ReposOwnerRepoKeysEnableId**](docs/Api/RepositoriesApi.md#putv5reposownerrepokeysenableid) | **PUT** /v5/repos/{owner}/{repo}/keys/enable/{id} | 启用仓库公钥
 *RepositoriesApi* | [**putV5ReposOwnerRepoPages**](docs/Api/RepositoriesApi.md#putv5reposownerrepopages) | **PUT** /v5/repos/{owner}/{repo}/pages | 上传设置 Pages SSL 证书和域名
@@ -348,8 +356,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AttachFile](docs/Model/AttachFile.md)
+ - [Blame](docs/Model/Blame.md)
  - [Blob](docs/Model/Blob.md)
  - [Branch](docs/Model/Branch.md)
+ - [CheckAnnotation](docs/Model/CheckAnnotation.md)
+ - [CheckRun](docs/Model/CheckRun.md)
  - [Code](docs/Model/Code.md)
  - [CodeComment](docs/Model/CodeComment.md)
  - [CodeForks](docs/Model/CodeForks.md)
@@ -362,11 +374,14 @@ Class | Method | HTTP request | Description
  - [Content](docs/Model/Content.md)
  - [ContentBasic](docs/Model/ContentBasic.md)
  - [Contributor](docs/Model/Contributor.md)
+ - [DiffFile](docs/Model/DiffFile.md)
  - [EnterpriseBasic](docs/Model/EnterpriseBasic.md)
  - [EnterpriseMember](docs/Model/EnterpriseMember.md)
  - [Event](docs/Model/Event.md)
+ - [GitUser](docs/Model/GitUser.md)
  - [GiteeMetrics](docs/Model/GiteeMetrics.md)
  - [Group](docs/Model/Group.md)
+ - [GroupBasic](docs/Model/GroupBasic.md)
  - [GroupDetail](docs/Model/GroupDetail.md)
  - [GroupFollowers](docs/Model/GroupFollowers.md)
  - [GroupMember](docs/Model/GroupMember.md)
@@ -380,12 +395,16 @@ Class | Method | HTTP request | Description
  - [NamespaceMini](docs/Model/NamespaceMini.md)
  - [Note](docs/Model/Note.md)
  - [OperateLog](docs/Model/OperateLog.md)
+ - [PostV5ReposOwnerRepoCommits](docs/Model/PostV5ReposOwnerRepoCommits.md)
+ - [PostV5ReposOwnerRepoCommitsActions](docs/Model/PostV5ReposOwnerRepoCommitsActions.md)
+ - [PostV5ReposOwnerRepoCommitsAuthor](docs/Model/PostV5ReposOwnerRepoCommitsAuthor.md)
  - [ProgramBasic](docs/Model/ProgramBasic.md)
  - [Project](docs/Model/Project.md)
  - [ProjectBasic](docs/Model/ProjectBasic.md)
  - [ProjectLabel](docs/Model/ProjectLabel.md)
  - [ProjectMember](docs/Model/ProjectMember.md)
  - [ProjectMemberPermission](docs/Model/ProjectMemberPermission.md)
+ - [ProjectMini](docs/Model/ProjectMini.md)
  - [ProjectPushConfig](docs/Model/ProjectPushConfig.md)
  - [ProjectStargazers](docs/Model/ProjectStargazers.md)
  - [ProjectTrafficData](docs/Model/ProjectTrafficData.md)
@@ -406,14 +425,17 @@ Class | Method | HTTP request | Description
  - [Tag](docs/Model/Tag.md)
  - [Tree](docs/Model/Tree.md)
  - [User](docs/Model/User.md)
+ - [UserAssignee](docs/Model/UserAssignee.md)
  - [UserBasic](docs/Model/UserBasic.md)
  - [UserDetail](docs/Model/UserDetail.md)
  - [UserEmail](docs/Model/UserEmail.md)
  - [UserInfo](docs/Model/UserInfo.md)
  - [UserMessage](docs/Model/UserMessage.md)
+ - [UserMessageList](docs/Model/UserMessageList.md)
  - [UserMini](docs/Model/UserMini.md)
  - [UserNotification](docs/Model/UserNotification.md)
  - [UserNotificationCount](docs/Model/UserNotificationCount.md)
+ - [UserNotificationList](docs/Model/UserNotificationList.md)
  - [UserNotificationNamespace](docs/Model/UserNotificationNamespace.md)
  - [UserNotificationSubject](docs/Model/UserNotificationSubject.md)
  - [WeekReport](docs/Model/WeekReport.md)

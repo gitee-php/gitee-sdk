@@ -7,28 +7,30 @@ Method | HTTP request | Description
 [**deleteV5ReposOwnerRepo**](RepositoriesApi.md#deleteV5ReposOwnerRepo) | **DELETE** /v5/repos/{owner}/{repo} | 删除一个仓库
 [**deleteV5ReposOwnerRepoBaiduStatisticKey**](RepositoriesApi.md#deleteV5ReposOwnerRepoBaiduStatisticKey) | **DELETE** /v5/repos/{owner}/{repo}/baidu_statistic_key | 删除仓库的百度统计 key
 [**deleteV5ReposOwnerRepoBranchesBranchProtection**](RepositoriesApi.md#deleteV5ReposOwnerRepoBranchesBranchProtection) | **DELETE** /v5/repos/{owner}/{repo}/branches/{branch}/protection | 取消保护分支的设置
-[**deleteV5ReposOwnerRepoBranchesWildcardSetting**](RepositoriesApi.md#deleteV5ReposOwnerRepoBranchesWildcardSetting) | **DELETE** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 删除仓库保护分支策略
+[**deleteV5ReposOwnerRepoBranchesWildcardSetting**](RepositoriesApi.md#deleteV5ReposOwnerRepoBranchesWildcardSetting) | **DELETE** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 删除保护分支规则
 [**deleteV5ReposOwnerRepoCollaboratorsUsername**](RepositoriesApi.md#deleteV5ReposOwnerRepoCollaboratorsUsername) | **DELETE** /v5/repos/{owner}/{repo}/collaborators/{username} | 移除仓库成员
 [**deleteV5ReposOwnerRepoCommentsId**](RepositoriesApi.md#deleteV5ReposOwnerRepoCommentsId) | **DELETE** /v5/repos/{owner}/{repo}/comments/{id} | 删除Commit评论
 [**deleteV5ReposOwnerRepoContentsPath**](RepositoriesApi.md#deleteV5ReposOwnerRepoContentsPath) | **DELETE** /v5/repos/{owner}/{repo}/contents/{path} | 删除文件
 [**deleteV5ReposOwnerRepoKeysEnableId**](RepositoriesApi.md#deleteV5ReposOwnerRepoKeysEnableId) | **DELETE** /v5/repos/{owner}/{repo}/keys/enable/{id} | 停用仓库公钥
 [**deleteV5ReposOwnerRepoKeysId**](RepositoriesApi.md#deleteV5ReposOwnerRepoKeysId) | **DELETE** /v5/repos/{owner}/{repo}/keys/{id} | 删除一个仓库公钥
 [**deleteV5ReposOwnerRepoReleasesId**](RepositoriesApi.md#deleteV5ReposOwnerRepoReleasesId) | **DELETE** /v5/repos/{owner}/{repo}/releases/{id} | 删除仓库Release
+[**deleteV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId**](RepositoriesApi.md#deleteV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId) | **DELETE** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files/{attach_file_id} | 删除仓库下指定 Release 的指定附件
 [**getV5EnterprisesEnterpriseRepos**](RepositoriesApi.md#getV5EnterprisesEnterpriseRepos) | **GET** /v5/enterprises/{enterprise}/repos | 获取企业的所有仓库
 [**getV5OrgsOrgRepos**](RepositoriesApi.md#getV5OrgsOrgRepos) | **GET** /v5/orgs/{org}/repos | 获取一个组织的仓库
 [**getV5ReposOwnerRepo**](RepositoriesApi.md#getV5ReposOwnerRepo) | **GET** /v5/repos/{owner}/{repo} | 获取用户的某个仓库
 [**getV5ReposOwnerRepoBaiduStatisticKey**](RepositoriesApi.md#getV5ReposOwnerRepoBaiduStatisticKey) | **GET** /v5/repos/{owner}/{repo}/baidu_statistic_key | 获取仓库的百度统计 key
+[**getV5ReposOwnerRepoBlamePath**](RepositoriesApi.md#getV5ReposOwnerRepoBlamePath) | **GET** /v5/repos/{owner}/{repo}/blame/{path} | Blame
 [**getV5ReposOwnerRepoBranches**](RepositoriesApi.md#getV5ReposOwnerRepoBranches) | **GET** /v5/repos/{owner}/{repo}/branches | 获取所有分支
 [**getV5ReposOwnerRepoBranchesBranch**](RepositoriesApi.md#getV5ReposOwnerRepoBranchesBranch) | **GET** /v5/repos/{owner}/{repo}/branches/{branch} | 获取单个分支
 [**getV5ReposOwnerRepoCollaborators**](RepositoriesApi.md#getV5ReposOwnerRepoCollaborators) | **GET** /v5/repos/{owner}/{repo}/collaborators | 获取仓库的所有成员
 [**getV5ReposOwnerRepoCollaboratorsUsername**](RepositoriesApi.md#getV5ReposOwnerRepoCollaboratorsUsername) | **GET** /v5/repos/{owner}/{repo}/collaborators/{username} | 判断用户是否为仓库成员
 [**getV5ReposOwnerRepoCollaboratorsUsernamePermission**](RepositoriesApi.md#getV5ReposOwnerRepoCollaboratorsUsernamePermission) | **GET** /v5/repos/{owner}/{repo}/collaborators/{username}/permission | 查看仓库成员的权限
-[**getV5ReposOwnerRepoComments**](RepositoriesApi.md#getV5ReposOwnerRepoComments) | **GET** /v5/repos/{owner}/{repo}/comments | 获取仓库的Commit评论
+[**getV5ReposOwnerRepoComments**](RepositoriesApi.md#getV5ReposOwnerRepoComments) | **GET** /v5/repos/{owner}/{repo}/comments | 获取仓库的 Commit 评论
 [**getV5ReposOwnerRepoCommentsId**](RepositoriesApi.md#getV5ReposOwnerRepoCommentsId) | **GET** /v5/repos/{owner}/{repo}/comments/{id} | 获取仓库的某条Commit评论
 [**getV5ReposOwnerRepoCommits**](RepositoriesApi.md#getV5ReposOwnerRepoCommits) | **GET** /v5/repos/{owner}/{repo}/commits | 仓库的所有提交
 [**getV5ReposOwnerRepoCommitsRefComments**](RepositoriesApi.md#getV5ReposOwnerRepoCommitsRefComments) | **GET** /v5/repos/{owner}/{repo}/commits/{ref}/comments | 获取单个Commit的评论
 [**getV5ReposOwnerRepoCommitsSha**](RepositoriesApi.md#getV5ReposOwnerRepoCommitsSha) | **GET** /v5/repos/{owner}/{repo}/commits/{sha} | 仓库的某个提交
-[**getV5ReposOwnerRepoCompareBaseHead**](RepositoriesApi.md#getV5ReposOwnerRepoCompareBaseHead) | **GET** /v5/repos/{owner}/{repo}/compare/{base}...{head} | 两个Commits之间对比的版本差异
+[**getV5ReposOwnerRepoCompareBaseHead**](RepositoriesApi.md#getV5ReposOwnerRepoCompareBaseHead) | **GET** /v5/repos/{owner}/{repo}/compare/{base}...{head} | Commits 对比
 [**getV5ReposOwnerRepoContentsPath**](RepositoriesApi.md#getV5ReposOwnerRepoContentsPath) | **GET** /v5/repos/{owner}/{repo}/contents(/{path}) | 获取仓库具体路径下的内容
 [**getV5ReposOwnerRepoContributors**](RepositoriesApi.md#getV5ReposOwnerRepoContributors) | **GET** /v5/repos/{owner}/{repo}/contributors | 获取仓库贡献者
 [**getV5ReposOwnerRepoForks**](RepositoriesApi.md#getV5ReposOwnerRepoForks) | **GET** /v5/repos/{owner}/{repo}/forks | 查看仓库的Forks
@@ -37,12 +39,18 @@ Method | HTTP request | Description
 [**getV5ReposOwnerRepoKeysId**](RepositoriesApi.md#getV5ReposOwnerRepoKeysId) | **GET** /v5/repos/{owner}/{repo}/keys/{id} | 获取仓库的单个公钥
 [**getV5ReposOwnerRepoPages**](RepositoriesApi.md#getV5ReposOwnerRepoPages) | **GET** /v5/repos/{owner}/{repo}/pages | 获取Pages信息
 [**getV5ReposOwnerRepoPushConfig**](RepositoriesApi.md#getV5ReposOwnerRepoPushConfig) | **GET** /v5/repos/{owner}/{repo}/push_config | 获取仓库推送规则设置
+[**getV5ReposOwnerRepoRawPath**](RepositoriesApi.md#getV5ReposOwnerRepoRawPath) | **GET** /v5/repos/{owner}/{repo}/raw/{path} | 获取 raw 文件（100MB 以内）
 [**getV5ReposOwnerRepoReadme**](RepositoriesApi.md#getV5ReposOwnerRepoReadme) | **GET** /v5/repos/{owner}/{repo}/readme | 获取仓库README
 [**getV5ReposOwnerRepoReleases**](RepositoriesApi.md#getV5ReposOwnerRepoReleases) | **GET** /v5/repos/{owner}/{repo}/releases | 获取仓库的所有Releases
 [**getV5ReposOwnerRepoReleasesId**](RepositoriesApi.md#getV5ReposOwnerRepoReleasesId) | **GET** /v5/repos/{owner}/{repo}/releases/{id} | 获取仓库的单个Releases
 [**getV5ReposOwnerRepoReleasesLatest**](RepositoriesApi.md#getV5ReposOwnerRepoReleasesLatest) | **GET** /v5/repos/{owner}/{repo}/releases/latest | 获取仓库的最后更新的Release
+[**getV5ReposOwnerRepoReleasesReleaseIdAttachFiles**](RepositoriesApi.md#getV5ReposOwnerRepoReleasesReleaseIdAttachFiles) | **GET** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files | 获取仓库下的指定 Release 的所有附件
+[**getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId**](RepositoriesApi.md#getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId) | **GET** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files/{attach_file_id} | 获取仓库下指定 Release 的单个附件
+[**getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileIdDownload**](RepositoriesApi.md#getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileIdDownload) | **GET** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files/{attach_file_id}/download | 下载指定 Release 的单个附件
 [**getV5ReposOwnerRepoReleasesTagsTag**](RepositoriesApi.md#getV5ReposOwnerRepoReleasesTagsTag) | **GET** /v5/repos/{owner}/{repo}/releases/tags/{tag} | 根据Tag名称获取仓库的Release
-[**getV5ReposOwnerRepoTags**](RepositoriesApi.md#getV5ReposOwnerRepoTags) | **GET** /v5/repos/{owner}/{repo}/tags | 列出仓库所有的tags
+[**getV5ReposOwnerRepoTags**](RepositoriesApi.md#getV5ReposOwnerRepoTags) | **GET** /v5/repos/{owner}/{repo}/tags | 列出仓库所有的 tags
+[**getV5ReposOwnerRepoTarball**](RepositoriesApi.md#getV5ReposOwnerRepoTarball) | **GET** /v5/repos/{owner}/{repo}/tarball | 下载仓库 tar.gz
+[**getV5ReposOwnerRepoZipball**](RepositoriesApi.md#getV5ReposOwnerRepoZipball) | **GET** /v5/repos/{owner}/{repo}/zipball | 下载仓库 zip
 [**getV5UserRepos**](RepositoriesApi.md#getV5UserRepos) | **GET** /v5/user/repos | 列出授权用户的所有仓库
 [**getV5UsersUsernameRepos**](RepositoriesApi.md#getV5UsersUsernameRepos) | **GET** /v5/users/{username}/repos | 获取某个用户的公开仓库
 [**patchV5ReposOwnerRepo**](RepositoriesApi.md#patchV5ReposOwnerRepo) | **PATCH** /v5/repos/{owner}/{repo} | 更新仓库设置
@@ -52,6 +60,7 @@ Method | HTTP request | Description
 [**postV5OrgsOrgRepos**](RepositoriesApi.md#postV5OrgsOrgRepos) | **POST** /v5/orgs/{org}/repos | 创建组织仓库
 [**postV5ReposOwnerRepoBaiduStatisticKey**](RepositoriesApi.md#postV5ReposOwnerRepoBaiduStatisticKey) | **POST** /v5/repos/{owner}/{repo}/baidu_statistic_key | 设置/更新仓库的百度统计 key
 [**postV5ReposOwnerRepoBranches**](RepositoriesApi.md#postV5ReposOwnerRepoBranches) | **POST** /v5/repos/{owner}/{repo}/branches | 创建分支
+[**postV5ReposOwnerRepoCommits**](RepositoriesApi.md#postV5ReposOwnerRepoCommits) | **POST** /v5/repos/{owner}/{repo}/commits | 提交多个文件变更
 [**postV5ReposOwnerRepoCommitsShaComments**](RepositoriesApi.md#postV5ReposOwnerRepoCommitsShaComments) | **POST** /v5/repos/{owner}/{repo}/commits/{sha}/comments | 创建Commit评论
 [**postV5ReposOwnerRepoContentsPath**](RepositoriesApi.md#postV5ReposOwnerRepoContentsPath) | **POST** /v5/repos/{owner}/{repo}/contents/{path} | 新建文件
 [**postV5ReposOwnerRepoForks**](RepositoriesApi.md#postV5ReposOwnerRepoForks) | **POST** /v5/repos/{owner}/{repo}/forks | Fork一个仓库
@@ -59,14 +68,15 @@ Method | HTTP request | Description
 [**postV5ReposOwnerRepoOpen**](RepositoriesApi.md#postV5ReposOwnerRepoOpen) | **POST** /v5/repos/{owner}/{repo}/open | 开通Gitee Go
 [**postV5ReposOwnerRepoPagesBuilds**](RepositoriesApi.md#postV5ReposOwnerRepoPagesBuilds) | **POST** /v5/repos/{owner}/{repo}/pages/builds | 请求建立Pages
 [**postV5ReposOwnerRepoReleases**](RepositoriesApi.md#postV5ReposOwnerRepoReleases) | **POST** /v5/repos/{owner}/{repo}/releases | 创建仓库Release
+[**postV5ReposOwnerRepoReleasesReleaseIdAttachFiles**](RepositoriesApi.md#postV5ReposOwnerRepoReleasesReleaseIdAttachFiles) | **POST** /v5/repos/{owner}/{repo}/releases/{release_id}/attach_files | 上传附件到仓库指定 Release
 [**postV5ReposOwnerRepoTags**](RepositoriesApi.md#postV5ReposOwnerRepoTags) | **POST** /v5/repos/{owner}/{repo}/tags | 创建一个仓库的 Tag
 [**postV5ReposOwnerRepoTrafficData**](RepositoriesApi.md#postV5ReposOwnerRepoTrafficData) | **POST** /v5/repos/{owner}/{repo}/traffic-data | 获取最近30天的七日以内访问量
 [**postV5UserRepos**](RepositoriesApi.md#postV5UserRepos) | **POST** /v5/user/repos | 创建一个仓库
 [**putV5ReposOwnerRepoBranchesBranchProtection**](RepositoriesApi.md#putV5ReposOwnerRepoBranchesBranchProtection) | **PUT** /v5/repos/{owner}/{repo}/branches/{branch}/protection | 设置分支保护
-[**putV5ReposOwnerRepoBranchesSettingNew**](RepositoriesApi.md#putV5ReposOwnerRepoBranchesSettingNew) | **PUT** /v5/repos/{owner}/{repo}/branches/setting/new | 新建仓库保护分支策略
-[**putV5ReposOwnerRepoBranchesWildcardSetting**](RepositoriesApi.md#putV5ReposOwnerRepoBranchesWildcardSetting) | **PUT** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 分支保护策略设置
+[**putV5ReposOwnerRepoBranchesSettingNew**](RepositoriesApi.md#putV5ReposOwnerRepoBranchesSettingNew) | **PUT** /v5/repos/{owner}/{repo}/branches/setting/new | 新建保护分支规则
+[**putV5ReposOwnerRepoBranchesWildcardSetting**](RepositoriesApi.md#putV5ReposOwnerRepoBranchesWildcardSetting) | **PUT** /v5/repos/{owner}/{repo}/branches/{wildcard}/setting | 更新保护分支规则
 [**putV5ReposOwnerRepoClear**](RepositoriesApi.md#putV5ReposOwnerRepoClear) | **PUT** /v5/repos/{owner}/{repo}/clear | 清空一个仓库
-[**putV5ReposOwnerRepoCollaboratorsUsername**](RepositoriesApi.md#putV5ReposOwnerRepoCollaboratorsUsername) | **PUT** /v5/repos/{owner}/{repo}/collaborators/{username} | 添加仓库成员
+[**putV5ReposOwnerRepoCollaboratorsUsername**](RepositoriesApi.md#putV5ReposOwnerRepoCollaboratorsUsername) | **PUT** /v5/repos/{owner}/{repo}/collaborators/{username} | 添加仓库成员或更新仓库成员权限
 [**putV5ReposOwnerRepoContentsPath**](RepositoriesApi.md#putV5ReposOwnerRepoContentsPath) | **PUT** /v5/repos/{owner}/{repo}/contents/{path} | 更新文件
 [**putV5ReposOwnerRepoKeysEnableId**](RepositoriesApi.md#putV5ReposOwnerRepoKeysEnableId) | **PUT** /v5/repos/{owner}/{repo}/keys/enable/{id} | 启用仓库公钥
 [**putV5ReposOwnerRepoPages**](RepositoriesApi.md#putV5ReposOwnerRepoPages) | **PUT** /v5/repos/{owner}/{repo}/pages | 上传设置 Pages SSL 证书和域名
@@ -235,9 +245,9 @@ No authorization required
 # **deleteV5ReposOwnerRepoBranchesWildcardSetting**
 > \Gitee\Model\ProtectionRule deleteV5ReposOwnerRepoBranchesWildcardSetting($owner, $repo, $wildcard, $accessToken)
 
-删除仓库保护分支策略
+删除保护分支规则
 
-删除仓库保护分支策略
+删除保护分支规则
 
 ### Example
 ```php
@@ -626,8 +636,64 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **deleteV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId**
+> deleteV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId($owner, $repo, $releaseId, $attachFileId, $accessToken)
+
+删除仓库下指定 Release 的指定附件
+
+删除仓库下指定 Release 的指定附件
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$releaseId = 56; // int | 
+$attachFileId = 56; // int | 
+$accessToken = "accessToken_example"; // string | 用户授权码
+
+try {
+    $apiInstance->deleteV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId($owner, $repo, $releaseId, $attachFileId, $accessToken);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->deleteV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **releaseId** | **int**|  |
+ **attachFileId** | **int**|  |
+ **accessToken** | **string**| 用户授权码 | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getV5EnterprisesEnterpriseRepos**
-> \Gitee\Model\Project getV5EnterprisesEnterpriseRepos($enterprise, $accessToken, $type, $direct, $page, $perPage)
+> \Gitee\Model\Project[] getV5EnterprisesEnterpriseRepos($enterprise, $accessToken, $search, $type, $direct, $page, $perPage)
 
 获取企业的所有仓库
 
@@ -645,13 +711,14 @@ $apiInstance = new Gitee\Api\RepositoriesApi(
 );
 $enterprise = "enterprise_example"; // string | 企业的路径(path/login)
 $accessToken = "accessToken_example"; // string | 用户授权码
+$search = "search_example"; // string | 搜索字符串
 $type = "all"; // string | 筛选仓库的类型，可以是 all, public, internal, private。默认: all
 $direct = true; // bool | 只获取直属仓库，默认: false
 $page = 1; // int | 当前的页码
 $perPage = 20; // int | 每页的数量，最大为 100
 
 try {
-    $result = $apiInstance->getV5EnterprisesEnterpriseRepos($enterprise, $accessToken, $type, $direct, $page, $perPage);
+    $result = $apiInstance->getV5EnterprisesEnterpriseRepos($enterprise, $accessToken, $search, $type, $direct, $page, $perPage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoriesApi->getV5EnterprisesEnterpriseRepos: ', $e->getMessage(), PHP_EOL;
@@ -665,6 +732,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise** | **string**| 企业的路径(path/login) |
  **accessToken** | **string**| 用户授权码 | [optional]
+ **search** | **string**| 搜索字符串 | [optional]
  **type** | **string**| 筛选仓库的类型，可以是 all, public, internal, private。默认: all | [optional] [default to all]
  **direct** | **bool**| 只获取直属仓库，默认: false | [optional]
  **page** | **int**| 当前的页码 | [optional] [default to 1]
@@ -672,7 +740,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Project**](../Model/Project.md)
+[**\Gitee\Model\Project[]**](../Model/Project.md)
 
 ### Authorization
 
@@ -686,7 +754,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5OrgsOrgRepos**
-> \Gitee\Model\Project getV5OrgsOrgRepos($org, $accessToken, $type, $page, $perPage)
+> \Gitee\Model\Project[] getV5OrgsOrgRepos($org, $accessToken, $type, $page, $perPage)
 
 获取一个组织的仓库
 
@@ -729,7 +797,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Project**](../Model/Project.md)
+[**\Gitee\Model\Project[]**](../Model/Project.md)
 
 ### Authorization
 
@@ -847,8 +915,65 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getV5ReposOwnerRepoBlamePath**
+> \Gitee\Model\Blame[] getV5ReposOwnerRepoBlamePath($owner, $repo, $path, $accessToken, $ref)
+
+Blame
+
+Blame
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$path = "path_example"; // string | 文件的路径（1 MB 以内的文件文件）
+$accessToken = "accessToken_example"; // string | 用户授权码
+$ref = "ref_example"; // string | 分支、tag 或 commit。默认: 仓库的默认分支（通常是 master）
+
+try {
+    $result = $apiInstance->getV5ReposOwnerRepoBlamePath($owner, $repo, $path, $accessToken, $ref);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoBlamePath: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **path** | **string**| 文件的路径（1 MB 以内的文件文件） |
+ **accessToken** | **string**| 用户授权码 | [optional]
+ **ref** | **string**| 分支、tag 或 commit。默认: 仓库的默认分支（通常是 master） | [optional]
+
+### Return type
+
+[**\Gitee\Model\Blame[]**](../Model/Blame.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getV5ReposOwnerRepoBranches**
-> \Gitee\Model\Branch[] getV5ReposOwnerRepoBranches($owner, $repo, $accessToken)
+> \Gitee\Model\Branch[] getV5ReposOwnerRepoBranches($owner, $repo, $accessToken, $sort, $direction, $page, $perPage)
 
 获取所有分支
 
@@ -867,9 +992,13 @@ $apiInstance = new Gitee\Api\RepositoriesApi(
 $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
 $repo = "repo_example"; // string | 仓库路径(path)
 $accessToken = "accessToken_example"; // string | 用户授权码
+$sort = "name"; // string | 排序字段
+$direction = "asc"; // string | 排序方向
+$page = 1; // int | 当前的页码
+$perPage = 56; // int | 每页的数量，最大为 100
 
 try {
-    $result = $apiInstance->getV5ReposOwnerRepoBranches($owner, $repo, $accessToken);
+    $result = $apiInstance->getV5ReposOwnerRepoBranches($owner, $repo, $accessToken, $sort, $direction, $page, $perPage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoBranches: ', $e->getMessage(), PHP_EOL;
@@ -884,6 +1013,10 @@ Name | Type | Description  | Notes
  **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
  **repo** | **string**| 仓库路径(path) |
  **accessToken** | **string**| 用户授权码 | [optional]
+ **sort** | **string**| 排序字段 | [optional] [default to name]
+ **direction** | **string**| 排序方向 | [optional] [default to asc]
+ **page** | **int**| 当前的页码 | [optional] [default to 1]
+ **perPage** | **int**| 每页的数量，最大为 100 | [optional]
 
 ### Return type
 
@@ -956,7 +1089,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoCollaborators**
-> \Gitee\Model\ProjectMember getV5ReposOwnerRepoCollaborators($owner, $repo, $accessToken, $page, $perPage)
+> \Gitee\Model\ProjectMember[] getV5ReposOwnerRepoCollaborators($owner, $repo, $accessToken, $page, $perPage)
 
 获取仓库的所有成员
 
@@ -999,7 +1132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\ProjectMember**](../Model/ProjectMember.md)
+[**\Gitee\Model\ProjectMember[]**](../Model/ProjectMember.md)
 
 ### Authorization
 
@@ -1122,11 +1255,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoComments**
-> \Gitee\Model\Note getV5ReposOwnerRepoComments($owner, $repo, $accessToken, $page, $perPage, $order)
+> \Gitee\Model\Note[] getV5ReposOwnerRepoComments($owner, $repo, $accessToken, $page, $perPage, $order)
 
-获取仓库的Commit评论
+获取仓库的 Commit 评论
 
-获取仓库的Commit评论
+获取仓库的 Commit 评论
 
 ### Example
 ```php
@@ -1167,7 +1300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Note**](../Model/Note.md)
+[**\Gitee\Model\Note[]**](../Model/Note.md)
 
 ### Authorization
 
@@ -1303,7 +1436,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoCommitsRefComments**
-> \Gitee\Model\Note getV5ReposOwnerRepoCommitsRefComments($owner, $repo, $ref, $accessToken, $page, $perPage)
+> \Gitee\Model\Note[] getV5ReposOwnerRepoCommitsRefComments($owner, $repo, $ref, $accessToken, $page, $perPage)
 
 获取单个Commit的评论
 
@@ -1348,7 +1481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Note**](../Model/Note.md)
+[**\Gitee\Model\Note[]**](../Model/Note.md)
 
 ### Authorization
 
@@ -1417,11 +1550,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoCompareBaseHead**
-> \Gitee\Model\Compare getV5ReposOwnerRepoCompareBaseHead($owner, $repo, $base, $head, $accessToken)
+> \Gitee\Model\Compare getV5ReposOwnerRepoCompareBaseHead($owner, $repo, $base, $head, $accessToken, $straight, $suffix)
 
-两个Commits之间对比的版本差异
+Commits 对比
 
-两个Commits之间对比的版本差异
+Commits 对比  返回的 commits 数量限制在 100 以内
 
 ### Example
 ```php
@@ -1435,12 +1568,14 @@ $apiInstance = new Gitee\Api\RepositoriesApi(
 );
 $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
 $repo = "repo_example"; // string | 仓库路径(path)
-$base = "base_example"; // string | Commit提交的SHA值或者分支名作为对比起点
-$head = "head_example"; // string | Commit提交的SHA值或者分支名作为对比终点
+$base = "base_example"; // string | 对比的起点。Commit SHA、分支名或标签名
+$head = "head_example"; // string | 对比的终点。Commit SHA、分支名或标签名
 $accessToken = "accessToken_example"; // string | 用户授权码
+$straight = true; // bool | 是否直对比。默认 false
+$suffix = "suffix_example"; // string | 按照文件后缀过滤文件，如 `.txt`。只影响 `files`
 
 try {
-    $result = $apiInstance->getV5ReposOwnerRepoCompareBaseHead($owner, $repo, $base, $head, $accessToken);
+    $result = $apiInstance->getV5ReposOwnerRepoCompareBaseHead($owner, $repo, $base, $head, $accessToken, $straight, $suffix);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoCompareBaseHead: ', $e->getMessage(), PHP_EOL;
@@ -1454,9 +1589,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
  **repo** | **string**| 仓库路径(path) |
- **base** | **string**| Commit提交的SHA值或者分支名作为对比起点 |
- **head** | **string**| Commit提交的SHA值或者分支名作为对比终点 |
+ **base** | **string**| 对比的起点。Commit SHA、分支名或标签名 |
+ **head** | **string**| 对比的终点。Commit SHA、分支名或标签名 |
  **accessToken** | **string**| 用户授权码 | [optional]
+ **straight** | **bool**| 是否直对比。默认 false | [optional]
+ **suffix** | **string**| 按照文件后缀过滤文件，如 &#x60;.txt&#x60;。只影响 &#x60;files&#x60; | [optional]
 
 ### Return type
 
@@ -1531,7 +1668,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoContributors**
-> \Gitee\Model\Contributor getV5ReposOwnerRepoContributors($owner, $repo, $accessToken, $type)
+> \Gitee\Model\Contributor[] getV5ReposOwnerRepoContributors($owner, $repo, $accessToken, $type)
 
 获取仓库贡献者
 
@@ -1572,7 +1709,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Contributor**](../Model/Contributor.md)
+[**\Gitee\Model\Contributor[]**](../Model/Contributor.md)
 
 ### Authorization
 
@@ -1586,7 +1723,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoForks**
-> \Gitee\Model\Project getV5ReposOwnerRepoForks($owner, $repo, $accessToken, $sort, $page, $perPage)
+> \Gitee\Model\Project[] getV5ReposOwnerRepoForks($owner, $repo, $accessToken, $sort, $page, $perPage)
 
 查看仓库的Forks
 
@@ -1631,7 +1768,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Project**](../Model/Project.md)
+[**\Gitee\Model\Project[]**](../Model/Project.md)
 
 ### Authorization
 
@@ -1918,6 +2055,62 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getV5ReposOwnerRepoRawPath**
+> getV5ReposOwnerRepoRawPath($owner, $repo, $path, $accessToken, $ref)
+
+获取 raw 文件（100MB 以内）
+
+获取 raw 文件（100MB 以内）
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$path = "path_example"; // string | 文件的路径
+$accessToken = "accessToken_example"; // string | 用户授权码
+$ref = "ref_example"; // string | 分支、tag 或 commit。默认: 仓库的默认分支（通常是 master）
+
+try {
+    $apiInstance->getV5ReposOwnerRepoRawPath($owner, $repo, $path, $accessToken, $ref);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoRawPath: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **path** | **string**| 文件的路径 |
+ **accessToken** | **string**| 用户授权码 | [optional]
+ **ref** | **string**| 分支、tag 或 commit。默认: 仓库的默认分支（通常是 master） | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getV5ReposOwnerRepoReadme**
 > \Gitee\Model\Content getV5ReposOwnerRepoReadme($owner, $repo, $accessToken, $ref)
 
@@ -2140,6 +2333,180 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getV5ReposOwnerRepoReleasesReleaseIdAttachFiles**
+> \Gitee\Model\AttachFile[] getV5ReposOwnerRepoReleasesReleaseIdAttachFiles($owner, $repo, $releaseId, $accessToken, $page, $perPage, $direction)
+
+获取仓库下的指定 Release 的所有附件
+
+获取仓库下的指定 Release 的所有附件
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$releaseId = 56; // int | 发行版本的ID
+$accessToken = "accessToken_example"; // string | 用户授权码
+$page = 1; // int | 当前的页码
+$perPage = 20; // int | 每页的数量，最大为 100
+$direction = "direction_example"; // string | 可选: 升序/降序，默认为升序
+
+try {
+    $result = $apiInstance->getV5ReposOwnerRepoReleasesReleaseIdAttachFiles($owner, $repo, $releaseId, $accessToken, $page, $perPage, $direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoReleasesReleaseIdAttachFiles: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **releaseId** | **int**| 发行版本的ID |
+ **accessToken** | **string**| 用户授权码 | [optional]
+ **page** | **int**| 当前的页码 | [optional] [default to 1]
+ **perPage** | **int**| 每页的数量，最大为 100 | [optional] [default to 20]
+ **direction** | **string**| 可选: 升序/降序，默认为升序 | [optional]
+
+### Return type
+
+[**\Gitee\Model\AttachFile[]**](../Model/AttachFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId**
+> \Gitee\Model\AttachFile getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId($owner, $repo, $releaseId, $attachFileId, $accessToken)
+
+获取仓库下指定 Release 的单个附件
+
+获取仓库下指定 Release 的单个附件
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$releaseId = 56; // int | 发行版本的ID
+$attachFileId = 56; // int | 发行版本下的附件ID
+$accessToken = "accessToken_example"; // string | 用户授权码
+
+try {
+    $result = $apiInstance->getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId($owner, $repo, $releaseId, $attachFileId, $accessToken);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **releaseId** | **int**| 发行版本的ID |
+ **attachFileId** | **int**| 发行版本下的附件ID |
+ **accessToken** | **string**| 用户授权码 | [optional]
+
+### Return type
+
+[**\Gitee\Model\AttachFile**](../Model/AttachFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileIdDownload**
+> getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileIdDownload($owner, $repo, $releaseId, $attachFileId, $accessToken)
+
+下载指定 Release 的单个附件
+
+下载指定 Release 的单个附件
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$releaseId = 56; // int | 发行版本的ID
+$attachFileId = 56; // int | 发行版本下的附件ID
+$accessToken = "accessToken_example"; // string | 用户授权码
+
+try {
+    $apiInstance->getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileIdDownload($owner, $repo, $releaseId, $attachFileId, $accessToken);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoReleasesReleaseIdAttachFilesAttachFileIdDownload: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **releaseId** | **int**| 发行版本的ID |
+ **attachFileId** | **int**| 发行版本下的附件ID |
+ **accessToken** | **string**| 用户授权码 | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getV5ReposOwnerRepoReleasesTagsTag**
 > \Gitee\Model\Release getV5ReposOwnerRepoReleasesTagsTag($owner, $repo, $tag, $accessToken)
 
@@ -2196,11 +2563,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoTags**
-> \Gitee\Model\Tag getV5ReposOwnerRepoTags($owner, $repo, $accessToken)
+> \Gitee\Model\Tag[] getV5ReposOwnerRepoTags($owner, $repo, $accessToken, $sort, $direction, $page, $perPage)
 
-列出仓库所有的tags
+列出仓库所有的 tags
 
-列出仓库所有的tags
+列出仓库所有的 tags
 
 ### Example
 ```php
@@ -2215,9 +2582,13 @@ $apiInstance = new Gitee\Api\RepositoriesApi(
 $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
 $repo = "repo_example"; // string | 仓库路径(path)
 $accessToken = "accessToken_example"; // string | 用户授权码
+$sort = "name"; // string | 排序字段
+$direction = "asc"; // string | 排序方向
+$page = 1; // int | 当前的页码
+$perPage = 56; // int | 每页的数量，最大为 100
 
 try {
-    $result = $apiInstance->getV5ReposOwnerRepoTags($owner, $repo, $accessToken);
+    $result = $apiInstance->getV5ReposOwnerRepoTags($owner, $repo, $accessToken, $sort, $direction, $page, $perPage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoTags: ', $e->getMessage(), PHP_EOL;
@@ -2232,10 +2603,14 @@ Name | Type | Description  | Notes
  **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
  **repo** | **string**| 仓库路径(path) |
  **accessToken** | **string**| 用户授权码 | [optional]
+ **sort** | **string**| 排序字段 | [optional] [default to name]
+ **direction** | **string**| 排序方向 | [optional] [default to asc]
+ **page** | **int**| 当前的页码 | [optional] [default to 1]
+ **perPage** | **int**| 每页的数量，最大为 100 | [optional]
 
 ### Return type
 
-[**\Gitee\Model\Tag**](../Model/Tag.md)
+[**\Gitee\Model\Tag[]**](../Model/Tag.md)
 
 ### Authorization
 
@@ -2248,8 +2623,116 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getV5ReposOwnerRepoTarball**
+> getV5ReposOwnerRepoTarball($owner, $repo, $accessToken, $ref)
+
+下载仓库 tar.gz
+
+下载仓库 tar.gz
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$accessToken = "accessToken_example"; // string | 用户授权码
+$ref = "ref_example"; // string | 分支、tag或commit。默认: 仓库的默认分支(通常是master)
+
+try {
+    $apiInstance->getV5ReposOwnerRepoTarball($owner, $repo, $accessToken, $ref);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoTarball: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **accessToken** | **string**| 用户授权码 | [optional]
+ **ref** | **string**| 分支、tag或commit。默认: 仓库的默认分支(通常是master) | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/gzip
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getV5ReposOwnerRepoZipball**
+> getV5ReposOwnerRepoZipball($owner, $repo, $accessToken, $ref)
+
+下载仓库 zip
+
+下载仓库 zip
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$accessToken = "accessToken_example"; // string | 用户授权码
+$ref = "ref_example"; // string | 分支、tag或commit。默认: 仓库的默认分支(通常是master)
+
+try {
+    $apiInstance->getV5ReposOwnerRepoZipball($owner, $repo, $accessToken, $ref);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->getV5ReposOwnerRepoZipball: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **accessToken** | **string**| 用户授权码 | [optional]
+ **ref** | **string**| 分支、tag或commit。默认: 仓库的默认分支(通常是master) | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/zip
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getV5UserRepos**
-> \Gitee\Model\Project getV5UserRepos($accessToken, $visibility, $affiliation, $type, $sort, $direction, $q, $page, $perPage)
+> \Gitee\Model\Project[] getV5UserRepos($accessToken, $visibility, $affiliation, $type, $sort, $direction, $q, $page, $perPage)
 
 列出授权用户的所有仓库
 
@@ -2300,7 +2783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Project**](../Model/Project.md)
+[**\Gitee\Model\Project[]**](../Model/Project.md)
 
 ### Authorization
 
@@ -2314,7 +2797,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5UsersUsernameRepos**
-> \Gitee\Model\Project getV5UsersUsernameRepos($username, $accessToken, $type, $sort, $direction, $page, $perPage)
+> \Gitee\Model\Project[] getV5UsersUsernameRepos($username, $accessToken, $type, $sort, $direction, $page, $perPage)
 
 获取某个用户的公开仓库
 
@@ -2361,7 +2844,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Project**](../Model/Project.md)
+[**\Gitee\Model\Project[]**](../Model/Project.md)
 
 ### Authorization
 
@@ -2850,6 +3333,59 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **postV5ReposOwnerRepoCommits**
+> \Gitee\Model\RepoCommitWithFiles postV5ReposOwnerRepoCommits($owner, $repo, $v5ReposOwnerRepoCommits)
+
+提交多个文件变更
+
+提交多个文件变更
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$v5ReposOwnerRepoCommits = new \Gitee\Model\PostV5ReposOwnerRepoCommits(); // \Gitee\Model\PostV5ReposOwnerRepoCommits | 
+
+try {
+    $result = $apiInstance->postV5ReposOwnerRepoCommits($owner, $repo, $v5ReposOwnerRepoCommits);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->postV5ReposOwnerRepoCommits: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **v5ReposOwnerRepoCommits** | [**\Gitee\Model\PostV5ReposOwnerRepoCommits**](../Model/PostV5ReposOwnerRepoCommits.md)|  |
+
+### Return type
+
+[**\Gitee\Model\RepoCommitWithFiles**](../Model/RepoCommitWithFiles.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **postV5ReposOwnerRepoCommitsShaComments**
 > \Gitee\Model\Note postV5ReposOwnerRepoCommitsShaComments($owner, $repo, $sha, $body, $accessToken, $path, $position)
 
@@ -3000,7 +3536,7 @@ $apiInstance = new Gitee\Api\RepositoriesApi(
 $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
 $repo = "repo_example"; // string | 仓库路径(path)
 $accessToken = "accessToken_example"; // string | 用户授权码
-$organization = "organization_example"; // string | 组织空间地址，不填写默认Fork到用户个人空间地址
+$organization = "organization_example"; // string | 组织空间完整地址，不填写默认Fork到用户个人空间地址
 $name = "name_example"; // string | fork 后仓库名称。默认: 源仓库名称
 $path = "path_example"; // string | fork 后仓库地址。默认: 源仓库地址
 
@@ -3020,7 +3556,7 @@ Name | Type | Description  | Notes
  **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
  **repo** | **string**| 仓库路径(path) |
  **accessToken** | **string**| 用户授权码 | [optional]
- **organization** | **string**| 组织空间地址，不填写默认Fork到用户个人空间地址 | [optional]
+ **organization** | **string**| 组织空间完整地址，不填写默认Fork到用户个人空间地址 | [optional]
  **name** | **string**| fork 后仓库名称。默认: 源仓库名称 | [optional]
  **path** | **string**| fork 后仓库地址。默认: 源仓库地址 | [optional]
 
@@ -3259,6 +3795,63 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postV5ReposOwnerRepoReleasesReleaseIdAttachFiles**
+> \Gitee\Model\AttachFile postV5ReposOwnerRepoReleasesReleaseIdAttachFiles($owner, $repo, $releaseId, $file, $accessToken)
+
+上传附件到仓库指定 Release
+
+上传附件到仓库指定 Release
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Gitee\Api\RepositoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
+$repo = "repo_example"; // string | 仓库路径(path)
+$releaseId = 56; // int | 发行版本的ID
+$file = "/path/to/file.txt"; // \SplFileObject | 上传的文件
+$accessToken = "accessToken_example"; // string | 用户授权码
+
+try {
+    $result = $apiInstance->postV5ReposOwnerRepoReleasesReleaseIdAttachFiles($owner, $repo, $releaseId, $file, $accessToken);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RepositoriesApi->postV5ReposOwnerRepoReleasesReleaseIdAttachFiles: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
+ **repo** | **string**| 仓库路径(path) |
+ **releaseId** | **int**| 发行版本的ID |
+ **file** | **\SplFileObject**| 上传的文件 |
+ **accessToken** | **string**| 用户授权码 | [optional]
+
+### Return type
+
+[**\Gitee\Model\AttachFile**](../Model/AttachFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -3506,11 +4099,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putV5ReposOwnerRepoBranchesSettingNew**
-> \Gitee\Model\ProtectionRule putV5ReposOwnerRepoBranchesSettingNew($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken)
+> \Gitee\Model\ProtectionRule putV5ReposOwnerRepoBranchesSettingNew($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken, $escapseProtectBranchList)
 
-新建仓库保护分支策略
+新建保护分支规则
 
-新建仓库保护分支策略
+新建保护分支规则
 
 ### Example
 ```php
@@ -3525,13 +4118,14 @@ $apiInstance = new Gitee\Api\RepositoriesApi(
 $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
 $repo = "repo_example"; // string | 仓库路径(path)
 $wildcard = "wildcard_example"; // string | 分支/通配符
-$pusher = "admin"; // string | admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 ';' 隔开)
-$merger = "admin"; // string | admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 ';' 隔开)
-$mode = "standard"; // string | 模式 standard: 标准模式, review: 评审模式
+$pusher = "admin"; // string | 可推送代码成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 ';' 隔开）
+$merger = "admin"; // string | 可合并 Pull Request 成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 ';' 隔开）
+$mode = "standard"; // string | 模式。standard: 标准模式, review: 评审模式
 $accessToken = "accessToken_example"; // string | 用户授权码
+$escapseProtectBranchList = array("escapseProtectBranchList_example"); // string[] | 不受规则影响的分支列表，以英文逗号分隔，形如：['a', 'b']
 
 try {
-    $result = $apiInstance->putV5ReposOwnerRepoBranchesSettingNew($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken);
+    $result = $apiInstance->putV5ReposOwnerRepoBranchesSettingNew($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken, $escapseProtectBranchList);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoriesApi->putV5ReposOwnerRepoBranchesSettingNew: ', $e->getMessage(), PHP_EOL;
@@ -3546,10 +4140,11 @@ Name | Type | Description  | Notes
  **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
  **repo** | **string**| 仓库路径(path) |
  **wildcard** | **string**| 分支/通配符 |
- **pusher** | **string**| admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 &#39;;&#39; 隔开) | [default to admin]
- **merger** | **string**| admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 &#39;;&#39; 隔开) | [default to admin]
- **mode** | **string**| 模式 standard: 标准模式, review: 评审模式 | [default to standard]
+ **pusher** | **string**| 可推送代码成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 &#39;;&#39; 隔开） | [default to admin]
+ **merger** | **string**| 可合并 Pull Request 成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 &#39;;&#39; 隔开） | [default to admin]
+ **mode** | **string**| 模式。standard: 标准模式, review: 评审模式 | [default to standard]
  **accessToken** | **string**| 用户授权码 | [optional]
+ **escapseProtectBranchList** | [**string[]**](../Model/string.md)| 不受规则影响的分支列表，以英文逗号分隔，形如：[&#39;a&#39;, &#39;b&#39;] | [optional]
 
 ### Return type
 
@@ -3567,11 +4162,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putV5ReposOwnerRepoBranchesWildcardSetting**
-> \Gitee\Model\ProtectionRule putV5ReposOwnerRepoBranchesWildcardSetting($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken, $newWildcard)
+> \Gitee\Model\ProtectionRule putV5ReposOwnerRepoBranchesWildcardSetting($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken, $newWildcard, $escapseProtectBranchList)
 
-分支保护策略设置
+更新保护分支规则
 
-分支保护策略设置
+更新保护分支规则
 
 ### Example
 ```php
@@ -3586,14 +4181,15 @@ $apiInstance = new Gitee\Api\RepositoriesApi(
 $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
 $repo = "repo_example"; // string | 仓库路径(path)
 $wildcard = "wildcard_example"; // string | 分支/通配符
-$pusher = "admin"; // string | admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 ';' 隔开)
-$merger = "admin"; // string | admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 ';' 隔开)
-$mode = "standard"; // string | 模式 standard: 标准模式, review: 评审模式
+$pusher = "admin"; // string | 可推送代码成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 ';' 隔开）
+$merger = "admin"; // string | 可合并 Pull Request 成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 ';' 隔开）
+$mode = "standard"; // string | 模式。standard: 标准模式, review: 评审模式
 $accessToken = "accessToken_example"; // string | 用户授权码
 $newWildcard = "newWildcard_example"; // string | 新分支/通配符(为空不修改)
+$escapseProtectBranchList = array("escapseProtectBranchList_example"); // string[] | 不受规则影响的分支列表，以英文逗号分隔，形如：['a', 'b']
 
 try {
-    $result = $apiInstance->putV5ReposOwnerRepoBranchesWildcardSetting($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken, $newWildcard);
+    $result = $apiInstance->putV5ReposOwnerRepoBranchesWildcardSetting($owner, $repo, $wildcard, $pusher, $merger, $mode, $accessToken, $newWildcard, $escapseProtectBranchList);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RepositoriesApi->putV5ReposOwnerRepoBranchesWildcardSetting: ', $e->getMessage(), PHP_EOL;
@@ -3608,11 +4204,12 @@ Name | Type | Description  | Notes
  **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
  **repo** | **string**| 仓库路径(path) |
  **wildcard** | **string**| 分支/通配符 |
- **pusher** | **string**| admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 &#39;;&#39; 隔开) | [default to admin]
- **merger** | **string**| admin: 仓库管理员, none: 禁止任何人合并; 用户: 个人的地址path(多个用户用 &#39;;&#39; 隔开) | [default to admin]
- **mode** | **string**| 模式 standard: 标准模式, review: 评审模式 | [default to standard]
+ **pusher** | **string**| 可推送代码成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 &#39;;&#39; 隔开） | [default to admin]
+ **merger** | **string**| 可合并 Pull Request 成员。developer：仓库管理员和开发者；admin：仓库管理员；none：禁止任何人合并; 用户：个人的地址 path（多个用户用 &#39;;&#39; 隔开） | [default to admin]
+ **mode** | **string**| 模式。standard: 标准模式, review: 评审模式 | [default to standard]
  **accessToken** | **string**| 用户授权码 | [optional]
  **newWildcard** | **string**| 新分支/通配符(为空不修改) | [optional]
+ **escapseProtectBranchList** | [**string[]**](../Model/string.md)| 不受规则影响的分支列表，以英文逗号分隔，形如：[&#39;a&#39;, &#39;b&#39;] | [optional]
 
 ### Return type
 
@@ -3684,9 +4281,9 @@ No authorization required
 # **putV5ReposOwnerRepoCollaboratorsUsername**
 > \Gitee\Model\ProjectMember putV5ReposOwnerRepoCollaboratorsUsername($owner, $repo, $username, $permission, $accessToken)
 
-添加仓库成员
+添加仓库成员或更新仓库成员权限
 
-添加仓库成员
+添加仓库成员或更新仓库成员权限
 
 ### Example
 ```php
@@ -3991,7 +4588,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putV5ReposOwnerRepoReviewer**
-> \Gitee\Model\Contributor putV5ReposOwnerRepoReviewer($owner, $repo, $assignees, $testers, $assigneesNumber, $testersNumber, $accessToken)
+> \Gitee\Model\Project putV5ReposOwnerRepoReviewer($owner, $repo, $assignees, $testers, $assigneesNumber, $testersNumber, $accessToken)
 
 修改代码审查设置
 
@@ -4038,7 +4635,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Contributor**](../Model/Contributor.md)
+[**\Gitee\Model\Project**](../Model/Project.md)
 
 ### Authorization
 

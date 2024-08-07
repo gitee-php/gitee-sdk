@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | [optional] 
+**id** | **int** |  | [optional] 
 **url** | **string** |  | [optional] 
-**createdAt** | **string** |  | [optional] 
 **password** | **string** |  | [optional] 
-**projectId** | **string** |  | [optional] 
 **result** | **string** |  | [optional] 
-**resultCode** | **string** |  | [optional] 
-**pushEvents** | **string** |  | [optional] 
-**tagPushEvents** | **string** |  | [optional] 
-**issuesEvents** | **string** |  | [optional] 
-**noteEvents** | **string** |  | [optional] 
-**mergeRequestsEvents** | **string** |  | [optional] 
+**projectId** | **int** |  | [optional] 
+**resultCode** | **int** |  | [optional] 
+**createdAt** | [**\DateTime**](https://www.php.net/class.datetime) |  | [optional] 
+**pushEvents** | **bool** |  | [optional] 
+**tagPushEvents** | **bool** |  | [optional] 
+**issuesEvents** | **bool** |  | [optional] 
+**noteEvents** | **bool** |  | [optional] 
+**mergeRequestsEvents** | **bool** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

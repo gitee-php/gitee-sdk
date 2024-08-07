@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **receivedEventsUrl** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 **memberRole** | **string** |  | [optional] 
-**watchAt** | **string** |  | [optional] 
+**watchAt** | [**\DateTime**](https://www.php.net/class.datetime) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

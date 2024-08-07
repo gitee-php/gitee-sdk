@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **eventsUrl** | **string** |  | [optional] 
 **membersUrl** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
-**followCount** | **string** |  | [optional] 
+**followCount** | **int** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

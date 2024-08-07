@@ -204,7 +204,7 @@ $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织�
 $repo = "repo_example"; // string | 仓库路径(path)
 $number = 56; // int | 里程碑序号(id)
 $title = "title_example"; // string | 里程碑标题
-$dueOn = "dueOn_example"; // string | 里程碑的截止日期
+$dueOn = new \DateTime("2013-10-20"); // \DateTime | 里程碑的截止日期
 $accessToken = "accessToken_example"; // string | 用户授权码
 $state = "open"; // string | 里程碑状态: open, closed, all。默认: open
 $description = "description_example"; // string | 里程碑具体描述
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
  **repo** | **string**| 仓库路径(path) |
  **number** | **int**| 里程碑序号(id) |
  **title** | **string**| 里程碑标题 |
- **dueOn** | **string**| 里程碑的截止日期 |
+ **dueOn** | **\DateTime**| 里程碑的截止日期 |
  **accessToken** | **string**| 用户授权码 | [optional]
  **state** | **string**| 里程碑状态: open, closed, all。默认: open | [optional] [default to open]
  **description** | **string**| 里程碑具体描述 | [optional]
@@ -266,7 +266,7 @@ $apiInstance = new Gitee\Api\MilestonesApi(
 $owner = "owner_example"; // string | 仓库所属空间地址(企业、组织或个人的地址path)
 $repo = "repo_example"; // string | 仓库路径(path)
 $title = "title_example"; // string | 里程碑标题
-$dueOn = "dueOn_example"; // string | 里程碑的截止日期
+$dueOn = new \DateTime("2013-10-20"); // \DateTime | 里程碑的截止日期
 $accessToken = "accessToken_example"; // string | 用户授权码
 $state = "open"; // string | 里程碑状态: open, closed, all。默认: open
 $description = "description_example"; // string | 里程碑具体描述
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
  **owner** | **string**| 仓库所属空间地址(企业、组织或个人的地址path) |
  **repo** | **string**| 仓库路径(path) |
  **title** | **string**| 里程碑标题 |
- **dueOn** | **string**| 里程碑的截止日期 |
+ **dueOn** | **\DateTime**| 里程碑的截止日期 |
  **accessToken** | **string**| 用户授权码 | [optional]
  **state** | **string**| 里程碑状态: open, closed, all。默认: open | [optional] [default to open]
  **description** | **string**| 里程碑具体描述 | [optional]

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sha** | **string** |  | [optional] 
-**size** | **string** |  | [optional] 
+**size** | **int** |  | [optional] 
 **url** | **string** |  | [optional] 
 **content** | **string** |  | [optional] 
 **encoding** | **string** |  | [optional] 

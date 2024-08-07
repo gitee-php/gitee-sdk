@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | [optional] 
 **path** | **string** |  | [optional] 
-**size** | **string** |  | [optional] 
+**size** | **int** |  | [optional] 
 **sha** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 **url** | **string** |  | [optional] 

@@ -726,7 +726,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoIssuesComments**
-> \Gitee\Model\Note getV5ReposOwnerRepoIssuesComments($owner, $repo, $accessToken, $sort, $direction, $since, $page, $perPage)
+> \Gitee\Model\Note[] getV5ReposOwnerRepoIssuesComments($owner, $repo, $accessToken, $sort, $direction, $since, $page, $perPage)
 
 获取仓库所有Issue的评论
 
@@ -775,7 +775,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Note**](../Model/Note.md)
+[**\Gitee\Model\Note[]**](../Model/Note.md)
 
 ### Authorization
 
@@ -899,7 +899,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5ReposOwnerRepoIssuesNumberComments**
-> \Gitee\Model\Note getV5ReposOwnerRepoIssuesNumberComments($owner, $repo, $number, $accessToken, $since, $page, $perPage, $order)
+> \Gitee\Model\Note[] getV5ReposOwnerRepoIssuesNumberComments($owner, $repo, $number, $accessToken, $since, $page, $perPage, $order)
 
 获取仓库某个Issue所有的评论
 
@@ -948,7 +948,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Gitee\Model\Note**](../Model/Note.md)
+[**\Gitee\Model\Note[]**](../Model/Note.md)
 
 ### Authorization
 

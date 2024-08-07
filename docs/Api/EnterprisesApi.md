@@ -315,7 +315,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getV5EnterprisesEnterpriseMembersSearch**
-> getV5EnterprisesEnterpriseMembersSearch($enterprise, $queryType, $queryValue, $accessToken)
+> \Gitee\Model\EnterpriseMember getV5EnterprisesEnterpriseMembersSearch($enterprise, $queryType, $queryValue, $accessToken)
 
 获取企业成员信息(通过用户名/邮箱)
 
@@ -337,7 +337,8 @@ $queryValue = "queryValue_example"; // string | 查询值
 $accessToken = "accessToken_example"; // string | 用户授权码
 
 try {
-    $apiInstance->getV5EnterprisesEnterpriseMembersSearch($enterprise, $queryType, $queryValue, $accessToken);
+    $result = $apiInstance->getV5EnterprisesEnterpriseMembersSearch($enterprise, $queryType, $queryValue, $accessToken);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EnterprisesApi->getV5EnterprisesEnterpriseMembersSearch: ', $e->getMessage(), PHP_EOL;
 }
@@ -355,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Gitee\Model\EnterpriseMember**](../Model/EnterpriseMember.md)
 
 ### Authorization
 
